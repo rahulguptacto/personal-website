@@ -35,11 +35,11 @@
         header ul {
             padding: 0;
             list-style: none;
+            text-align: center;
         }
         header li {
-            float: right;
             display: inline;
-            padding: 0 20px 0 20px;
+            padding: 0 20px;
         }
         header #branding {
             float: left;
@@ -57,6 +57,48 @@
             color: #fff;
             text-align: center;
             padding: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                margin: auto;
+            }
+            header {
+                text-align: center;
+            }
+            header ul {
+                padding: 0;
+                list-style: none;
+            }
+            header li {
+                display: block;
+                padding: 5px 0;
+            }
+            .section {
+                padding: 10px;
+            }
+            .flex-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .flex-container img {
+                margin: 0 0 20px 0;
+            }
+        }
+        .flex-container {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .flex-container img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        .flex-container div {
+            flex: 1;
         }
     </style>
 </head>
@@ -83,16 +125,14 @@
     <div class="container">
         <section id="bio" class="section">
             <h2>About Me</h2>
-            <div style="display: flex; align-items: flex-start;">
-                <img src="https://media.licdn.com/dms/image/C4D03AQEgAjrP7RvJ5w/profile-displayphoto-shrink_400_400/0/1645896906117?e=1724889600&v=beta&t=N65W_OQcZWQET42Idb28Xysm9PhY7JGGcc7i5BGO9QU" alt="Rahul Gupta" style="width: 150px; height: auto; border-radius: 50%; margin-right: 20px; flex-shrink: 0;">
+            <div class="flex-container">
+                <img src="https://media.licdn.com/dms/image/C4D03AQEgAjrP7RvJ5w/profile-displayphoto-shrink_400_400/0/1645896906117?e=1724889600&v=beta&t=N65W_OQcZWQET42Idb28Xysm9PhY7JGGcc7i5BGO9QU" alt="Rahul Gupta">
                 <div>
                     <p>I am Rahul Gupta, a seasoned C-suite technology leader with extensive experience in managing large-scale technology transformations and product management. Currently, I serve as the Chief Technology Officer at Conduent, a global leader in digital interactions and business process outsourcing. With over 20 years of experience in the IT services industry, I have successfully delivered YOY revenue growth of 15%, optimized technology spend by 35%, and improved operating margins by 10%.</p>
                     <p>Throughout my career, I have led the development and implementation of over 150 technology products and managed teams exceeding 8,000 professionals. My expertise lies in product and platform engineering, defining strategic technology roadmaps, and executing major business transformations. I am passionate about embedding AI/ML into core products to deliver exceptional value to end users and customers.</p>
                 </div>
             </div>
         </section>
-
-
 
         <section id="projects" class="section">
             <h2>Projects</h2>
@@ -106,7 +146,7 @@
             </ul>
             <p>These projects involved making the products modular, integrating AI and ML, and updating them to the latest standards, significantly reducing technology debt and enhancing operational efficiency.</p>
         </section>
-        <!-- Continue with next part -->
+
         <section id="services" class="section">
             <h2>Services</h2>
             <p>With extensive experience in technology platform transformation, product and services modernization, and technology spend optimization, I offer the following consulting services:</p>
@@ -196,7 +236,6 @@
                 <a href="mailto:rahul.gupta@outlook.com">rahul.gupta@outlook.com</a>
             </p>
         </section>
-
     </div>
 
     <footer>
