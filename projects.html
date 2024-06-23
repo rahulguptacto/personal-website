@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Gupta - Projects</title>
+    <meta name="description" content="Projects led by Rahul Gupta, including technology modernization and AI/ML integration.">
+    <meta name="keywords" content="Rahul Gupta, CTO, Projects, technology transformation, AI integration, ML, Conduent">
+    <meta name="author" content="Rahul Gupta">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77a1d3 3px solid;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        header li {
+            padding: 0 20px;
+        }
+        header #branding {
+            flex: 1;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        .section {
+            padding: 20px;
+            background: #fff;
+            margin: 20px 0;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav #menu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        nav #menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav #menu li {
+            padding: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                margin: auto;
+            }
+            header ul {
+                display: none;
+            }
+            header #menuToggle {
+                display: block;
+                cursor: pointer;
+                padding: 10px;
+                background: #333;
+                color: #fff;
+                border: none;
+                font-size: 16px;
+            }
+            nav #menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="branding">
+            <h1>Rahul Gupta</h1>
+            <p>Chief Technology Officer at Conduent</p>
+        </div>
+        <nav>
+            <button id="menuToggle">☰ Menu</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div id="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <p>During my tenure at Conduent, I have led the modernization of several key products, including:</p>
+            <ul>
+                <li>Financial Services: Auto Loan Servicing, Mortgage Services, Lockbox, Call Center, Payments, Insurance Claims inbound and adjudication</li>
+                <li>Health Care Solutions: Medicaid & Commercial Claims, Pharmacy Benefits Management, Disease Surveillance, Community Health, Pharma Patience Assistance Services & Hub, Provider Care Management, Payment Integrity Services & Subrogation</li>
+                <li>Transportation: Road Usage Charging / Tolling, Transit Fare Collection, Public Safety and Curbside</li>
+                <li>HRO/ TBO: Total Benefits Administration, Defined Benefits (Pension) and Defined Contributions</li>
+                <li>Commercial: Automated Document Management, Printmail</li>
+            </ul>
+            <p>These projects involved making the products modular, integrating AI and ML, and updating them to the latest standards, significantly reducing technology debt and enhancing operational efficiency.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Rahul Gupta. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("menuToggle").onclick = function() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
