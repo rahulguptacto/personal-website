@@ -66,8 +66,7 @@
             display: none;
             position: absolute;
             top: 70px;
-            left: 0;
-            width: 200px;
+            right: 0;
             background: #333;
             color: #fff;
             padding: 20px;
@@ -106,3 +105,33 @@
         document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("menuToggle").onclick = function() {
                 var menu = document.getElementById("menu");
+                if (menu.style.display === "block") {
+                    menu.style.display = "none";
+                } else {
+                    menu.style.display = "block";
+                }
+            };
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div id="branding">
+            <h1>Rahul Gupta</h1>
+            <p>Chief Technology Officer at Conduent</p>
+        </div>
+        <nav>
+            <button id="menuToggle">☰ Menu</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div id="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects
