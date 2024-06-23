@@ -65,7 +65,7 @@
         nav #menu {
             display: none;
             position: absolute;
-            top: 0;
+            top: 70px;
             left: 0;
             width: 200px;
             background: #333;
@@ -98,70 +98,11 @@
                 font-size: 16px;
             }
             nav #menu {
-                display: block;
+                display: none;
             }
         }
     </style>
-</head>
-<body>
-    <header>
-        <div id="branding">
-            <h1>Rahul Gupta</h1>
-            <p>Chief Technology Officer at Conduent</p>
-        </div>
-        <nav>
-            <button id="menuToggle">☰ Menu</button>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="achievements.html">Achievements</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div id="menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="achievements.html">Achievements</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <div class="container">
-        <section id="services" class="section">
-            <h2>Services</h2>
-            <p>With extensive experience in technology platform transformation, product and services modernization, and technology spend optimization, I offer the following consulting services:</p>
-            <ul>
-                <li>CTO Advisory Services: Strategic technology planning, innovation leadership, and technology roadmap development.</li>
-                <li>CIO Advisory Services: IT infrastructure optimization, enterprise application management, and IT operations improvement.</li>
-                <li>CDO Advisory Services: Data strategy formulation, data governance, and leveraging data for business insights.</li>
-                <li>Technology Spend Optimization: Identifying cost-saving opportunities, optimizing technology investments, and enhancing ROI.</li>
-                <li>Transformation Leadership: Leading digital transformation initiatives, modernizing legacy systems, and driving organizational change.</li>
-            </ul>
-            <p>If you are looking to hire a seasoned technology leader for CTO, CIO, or CDO roles, I am open to exploring opportunities where I can bring my expertise to drive business growth and technological advancement.</p>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Rahul Gupta. All Rights Reserved.</p>
-    </footer>
-
     <script>
-        document.getElementById("menuToggle").onclick = function() {
-            var menu = document.getElementById("menu");
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "block";
-            }
-        }
-    </script>
-</body>
-</html>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("menuToggle").onclick = function() {
+                var menu = document.getElementById("menu");
