@@ -26,6 +26,9 @@
             padding-top: 30px;
             min-height: 70px;
             border-bottom: #77a1d3 3px solid;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         header a {
             color: #fff;
@@ -36,14 +39,14 @@
         header ul {
             padding: 0;
             list-style: none;
-            text-align: center;
+            display: flex;
+            justify-content: center;
         }
         header li {
-            display: inline;
             padding: 0 20px;
         }
         header #branding {
-            float: left;
+            flex: 1;
         }
         header #branding h1 {
             margin: 0;
@@ -59,31 +62,43 @@
             text-align: center;
             padding: 10px 0;
         }
+        nav #menu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        nav #menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav #menu li {
+            padding: 10px 0;
+        }
         @media (max-width: 768px) {
             .container {
                 width: 95%;
                 margin: auto;
             }
-            header {
-                text-align: center;
-            }
             header ul {
-                padding: 0;
-                list-style: none;
+                display: none;
             }
-            header li {
+            header #menuToggle {
                 display: block;
-                padding: 5px 0;
-            }
-            .section {
+                cursor: pointer;
                 padding: 10px;
+                background: #333;
+                color: #fff;
+                border: none;
+                font-size: 16px;
             }
-            .flex-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .flex-container img {
-                margin: 0 0 20px 0;
+            nav #menu {
+                display: block;
             }
         }
         .flex-container {
@@ -105,23 +120,32 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <div id="branding">
-                <h1>Rahul Gupta</h1>
-                <p>Chief Technology Officer at Conduent</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#bio">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#achievements">Achievements</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <div id="branding">
+            <h1>Rahul Gupta</h1>
+            <p>Chief Technology Officer at Conduent</p>
         </div>
+        <nav>
+            <button id="menuToggle">☰ Menu</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div id="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <div class="container">
@@ -135,130 +159,21 @@
                 </div>
             </div>
         </section>
-
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <p>During my tenure at Conduent, I have led the modernization of several key products, including:</p>
-            <ul>
-                <li>Financial Services: Auto Loan Servicing, Mortgage Services, Lockbox, Call Center, Payments, Insurance Claims inbound and adjudication</li>
-                <li>Health Care Solutions: Medicaid & Commercial Claims, Pharmacy Benefits Management, Disease Surveillance, Community Health, Pharma Patience Assistance Services & Hub, Provider Care Management, Payment Integrity Services & Subrogation</li>
-                <li>Transportation: Road Usage Charging / Tolling, Transit Fare Collection, Public Safety and Curbside</li>
-                <li>HRO/ TBO: Total Benefits Administration, Defined Benefits (Pension) and Defined Contributions</li>
-                <li>Commercial: Automated Document Management, Printmail</li>
-            </ul>
-            <p>These projects involved making the products modular, integrating AI and ML, and updating them to the latest standards, significantly reducing technology debt and enhancing operational efficiency.</p>
-        </section>
-
-        <section id="achievements" class="section">
-            <h2>Achievements</h2>
-            <ul>
-                <li>Improved EBITDA by 4% by reducing implementation time from 24 to 9 months.</li>
-                <li>Increased re-use of standard products from less than 10% to 70%.</li>
-                <li>Reduced technology spend from $1.45B to $900M through a $500M capex product modernization & optimization program.</li>
-                <li>Managed $1B payments in a year for 22 different states and millions of participants by crafting a vision for blockchain and ledger-based technologies.</li>
-                <li>Achieved a 50% reduction in installation footprint time and cost for tolling by designing and integrating IoT-enabled roadside lanes.</li>
-                <li>Improved quality by 70% by developing and implementing standardized procedures across all projects.</li>
-                <li>Increased productivity by 20% through the elimination of redundant processes and the optimization of workflows.</li>
-                <li>Developed and launched 25+ AI, ML, and analytics add-on products to enhance core vertical offerings.</li>
-                <li>Contributed to 380+ active patents in computer vision, machine learning, cognitive analytics, AI, IoT, and intelligent automation.</li>
-                <li>Transitioned from 300+ bespoke platforms to 100+ industry-standard technology products, saving $450M in IT costs.</li>
-                <li>Consolidated 102 data centers to less than 20 and increased cloud adoption from less than 10% to 60%.</li>
-            </ul>
-        </section>
-
-        <section id="services" class="section">
-            <h2>Services</h2>
-            <p>With extensive experience in technology platform transformation, product and services modernization, and technology spend optimization, I offer the following consulting services:</p>
-            <ul>
-                <li>CTO Advisory Services: Strategic technology planning, innovation leadership, and technology roadmap development.</li>
-                <li>CIO Advisory Services: IT infrastructure optimization, enterprise application management, and IT operations improvement.</li>
-                <li>CDO Advisory Services: Data strategy formulation, data governance, and leveraging data for business insights.</li>
-                <li>Technology Spend Optimization: Identifying cost-saving opportunities, optimizing technology investments, and enhancing ROI.</li>
-                <li>Transformation Leadership: Leading digital transformation initiatives, modernizing legacy systems, and driving organizational change.</li>
-            </ul>
-            <p>If you are looking to hire a seasoned technology leader for CTO, CIO, or CDO roles, I am open to exploring opportunities where I can bring my expertise to drive business growth and technological advancement.</p>
-        </section>
-
-        <section id="testimonials" class="section">
-            <h2>Testimonials</h2>
-            <blockquote>
-                <p>"Rahul is an exceptional technology leader who has a keen ability to balance strategic vision with operational execution. His work at Conduent has been transformative." - John Doe, Former Colleague</p>
-            </blockquote>
-            <blockquote>
-                <p>"Working with Rahul has been a great experience. His insights into technology and his ability to drive change are truly commendable." - Jane Smith, Former Client</p>
-            </blockquote>
-        </section>
-
-        <section id="blog" class="section">
-            <h2>Blog</h2>
-            <article>
-                <h3><a href="#blog1">Key Trends in Technology Transformation</a></h3>
-                <p>As technology continues to evolve at a rapid pace, staying ahead of the curve is crucial for businesses. In this blog post, we explore the key trends driving technology transformation in 2024.</p>
-            </article>
-            <article>
-                <h3><a href="#blog2">Optimizing Technology Spend: Strategies for Success</a></h3>
-                <p>Optimizing technology spend is essential for maximizing ROI and ensuring sustainable growth. This post delves into effective strategies for managing technology investments.</p>
-            </article>
-            <article>
-                <h3><a href="#blog3">The Role of AI and ML in Modernizing Legacy Systems</a></h3>
-                <p>Artificial intelligence and machine learning are powerful tools for modernizing legacy systems. Learn how these technologies can enhance efficiency and drive innovation.</p>
-            </article>
-
-            <!-- Blog 1 -->
-            <div id="blog1" class="section">
-                <h3>Key Trends in Technology Transformation</h3>
-                <p>As technology continues to evolve at a rapid pace, staying ahead of the curve is crucial for businesses. Here are some of the key trends driving technology transformation in 2024:</p>
-                <ul>
-                    <li><strong>Artificial Intelligence and Machine Learning:</strong> AI and ML are at the forefront of technology transformation. Businesses are leveraging these technologies to automate processes, gain insights from data, and enhance decision-making.</li>
-                    <li><strong>Cloud Computing:</strong> Cloud adoption continues to rise as organizations seek scalable and cost-effective solutions for their IT infrastructure. The shift to cloud is enabling greater flexibility and innovation.</li>
-                    <li><strong>Cybersecurity:</strong> With the increasing number of cyber threats, cybersecurity is a top priority. Companies are investing in advanced security measures to protect their data and systems.</li>
-                    <li><strong>IoT and Edge Computing:</strong> The Internet of Things (IoT) and edge computing are transforming industries by enabling real-time data processing and improving operational efficiency.</li>
-                    <li><strong>Blockchain Technology:</strong> Blockchain is gaining traction beyond cryptocurrencies. It's being used for secure transactions, supply chain transparency, and decentralized applications.</li>
-                </ul>
-                <p>Staying informed about these trends and incorporating them into your technology strategy can help your business remain competitive and innovative.</p>
-            </div>
-
-            <!-- Blog 2 -->
-            <div id="blog2" class="section">
-                <h3>Optimizing Technology Spend: Strategies for Success</h3>
-                <p>Optimizing technology spend is essential for maximizing ROI and ensuring sustainable growth. Here are some effective strategies for managing technology investments:</p>
-                <ul>
-                    <li><strong>Conduct a Technology Audit:</strong> Regularly review your technology stack to identify redundant or underutilized assets. This helps in reallocating resources to more critical areas.</li>
-                    <li><strong>Prioritize Investments:</strong> Focus on technology investments that align with your business goals and deliver the highest value. Prioritizing investments ensures that resources are allocated efficiently.</li>
-                    <li><strong>Leverage Cloud Solutions:</strong> Cloud computing offers scalability and cost savings. By moving to the cloud, you can reduce hardware costs and pay only for the resources you use.</li>
-                    <li><strong>Implement Automation:</strong> Automation can significantly reduce operational costs. Invest in automation tools to streamline processes and improve efficiency.</li>
-                </ul>
-                <p>By implementing these strategies, businesses can optimize their technology spend, enhance operational efficiency, and drive sustainable growth.</p>
-            </div>
-
-            <!-- Blog 3 -->
-            <div id="blog3" class="section">
-                <h3>The Role of AI and ML in Modernizing Legacy Systems</h3>
-                <p>Artificial intelligence (AI) and machine learning (ML) are powerful tools for modernizing legacy systems. Here are some ways these technologies can enhance efficiency and drive innovation:</p>
-                <ul>
-                    <li><strong>Predictive Maintenance:</strong> AI and ML can analyze data from legacy systems to predict maintenance needs, reducing downtime and extending the lifespan of equipment.</li>
-                    <li><strong>Process Automation:</strong> Automating repetitive tasks with AI and ML can improve efficiency and reduce the risk of human error. This frees up employees to focus on more strategic activities.</li>
-                    <li><strong>Enhanced Data Analytics:</strong> Legacy systems often hold vast amounts of data. AI and ML can unlock insights from this data, enabling better decision-making and identifying new business opportunities.</li>
-                    <li><strong>Improved Customer Experience:</strong> AI-powered chatbots and virtual assistants can provide instant support to customers, improving satisfaction and reducing the workload on customer service teams.</li>
-                    <li><strong>Security Enhancements:</strong> AI and ML can detect and respond to security threats in real-time, providing an additional layer of protection for legacy systems.</li>
-                </ul>
-                <p>By integrating AI and ML into legacy systems, businesses can drive innovation, improve efficiency, and stay competitive in a rapidly changing technological landscape.</p>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>If you would like to get in touch, please reach out via LinkedIn or email.</p>
-            <p>
-                <a href="https://www.linkedin.com/in/rahulguptaconduent/">LinkedIn</a> |
-                <a href="mailto:rahulgupta_33@yahoo.com">rahulgupta_33@yahoo.com</a> |
-                <a href="mailto:rahul.gupta@outlook.com">rahul.gupta@outlook.com</a>
-            </p>
-        </section>
     </div>
 
     <footer>
         <p>&copy; 2024 Rahul Gupta. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById("menuToggle").onclick = function() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
