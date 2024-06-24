@@ -23,8 +23,7 @@
         header {
             background: #333;
             color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
+            padding: 10px 0;
             border-bottom: #77a1d3 3px solid;
             display: flex;
             justify-content: space-between;
@@ -41,9 +40,13 @@
             list-style: none;
             display: flex;
             justify-content: center;
+            margin: 0;
         }
         header li {
-            padding: 0 20px;
+            padding: 0 15px;
+        }
+        header li:not(:last-child) {
+            border-right: 1px solid #fff;
         }
         header #branding {
             flex: 1;
@@ -62,87 +65,29 @@
             text-align: center;
             padding: 10px 0;
         }
-        nav #menu {
-            display: none;
-            position: absolute;
-            top: 70px;
-            right: 0;
-            background: #333;
-            color: #fff;
-            padding: 20px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        .flex-container {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
         }
-        nav #menu ul {
-            list-style: none;
-            padding: 0;
+        .flex-container img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 20px;
+            flex-shrink: 0;
         }
-        nav #menu li {
-            padding: 10px 0;
-        }
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-                margin: auto;
-            }
-            header ul {
-                display: none;
-            }
-            header #menuToggle {
-                display: block;
-                cursor: pointer;
-                padding: 10px;
-                background: #333;
-                color: #fff;
-                border: none;
-                font-size: 16px;
-            }
-            nav #menu {
-                display: none;
-            }
+        .flex-container div {
+            flex: 1;
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("menuToggle").onclick = function() {
-                var menu = document.getElementById("menu");
-                if (menu.style.display === "block") {
-                    menu.style.display = "none";
-                } else {
-                    menu.style.display = "block";
-                }
-            };
-        });
-    </script>
 </head>
 <body>
     <header>
         <div id="branding">
             <h1>Rahul Gupta</h1>
-            <p>Chief Technology & Product Officer</p>
+            <p>Chief Technology Officer at Conduent</p>
         </div>
-        <nav>
-            <button id="menuToggle">☰ Menu</button>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="achievements.html">Achievements</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div id="menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="achievements.html">Achievements</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
     </header>
 
     <div class="container">
