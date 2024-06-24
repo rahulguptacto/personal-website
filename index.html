@@ -44,10 +44,6 @@
         }
         header li {
             padding: 0 20px;
-            border-right: 1px solid #fff;
-        }
-        header li:last-child {
-            border-right: none;
         }
         header #branding {
             flex: 1;
@@ -107,7 +103,11 @@
             }
             nav #menu {
                 display: none;
-                width: 200px;
+                width: 100%;
+            }
+            nav #menu ul {
+                display: block;
+                text-align: left;
             }
         }
         .flex-container {
