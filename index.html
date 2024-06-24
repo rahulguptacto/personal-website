@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahul Gupta - Contact</title>
-    <meta name="description" content="Contact Rahul Gupta via LinkedIn or email for inquiries about technology advisory services.">
-    <meta name="keywords" content="Rahul Gupta, CTO, Contact, LinkedIn, email">
+    <title>Rahul Gupta - CTO | Technology Transformation Expert | Advisory Services</title>
+    <meta name="description" content="Rahul Gupta, CTO, leads or advises organizations in their technology transformation, product modernization, and technology spend optimization.">
+    <meta name="keywords" content="Rahul Gupta, CTO, Chief Technology Officer, technology transformation, product modernization, technology spend optimization, advisory services, CIO, CDO, executive leadership, digital transformation, IT management, AI integration, machine learning, Conduent, technology spend, operational efficiency, cloud adoption, data analytics, business transformation, product management, platform engineering, security compliance">
     <meta name="author" content="Rahul Gupta">
     <style>
         body {
@@ -65,26 +65,20 @@
             text-align: center;
             padding: 10px 0;
         }
-        form {
+        .flex-container {
             display: flex;
-            flex-direction: column;
+            align-items: flex-start;
+            flex-wrap: wrap;
         }
-        form input, form textarea, form select {
-            margin: 10px 0;
-            padding: 10px;
-            font-size: 16px;
-            width: 100%;
+        .flex-container img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 20px;
+            flex-shrink: 0;
         }
-        form button {
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        form button:hover {
-            background-color: #555;
+        .flex-container div {
+            flex: 1;
         }
         @media (max-width: 768px) {
             .container {
@@ -101,6 +95,14 @@
             header li {
                 padding: 10px 0;
                 border: none;
+            }
+            .flex-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .flex-container img {
+                margin: 0 0 20px 0;
             }
         }
     </style>
@@ -125,38 +127,24 @@
     </header>
 
     <div class="container">
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <form action="https://formspree.io/f/mldrrlad" method="POST">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="company">Current Company</label>
-                <input type="text" id="company" name="company" required>
-                
-                <label for="area">Area of Advice</label>
-                <input type="text" id="area" name="area" required>
-                
-                <label for="goals">Goals</label>
-                <input type="text" id="goals" name="goals" required>
-                
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required>
-                
-                <label for="description">Description</label>
-                <textarea id="description" name="description" rows="5" required></textarea>
-                
-                <button type="submit">Submit</button>
-            </form>
-            <p>Or you can contact me at:</p>
-            <p>
-                <a href="https://www.linkedin.com/in/rahulguptaconduent/">LinkedIn</a> |
-                <a href="mailto:rahulgupta_33@yahoo.com">rahulgupta_33@yahoo.com</a> |
-                <a href="mailto:rahul.gupta@outlook.com">rahul.guptac@outlook.com</a>
-            </p>
+        <section id="bio" class="section">
+            <h2>About Me</h2>
+            <div class="flex-container">
+                <img src="https://media.licdn.com/dms/image/C4D03AQEgAjrP7RvJ5w/profile-displayphoto-shrink_400_400/0/1645896906117?e=1724889600&v=beta&t=N65W_OQcZWQET42Idb28Xysm9PhY7JGGcc7i5BGO9QU" alt="Rahul Gupta - Chief Technology Officer at Conduent">
+                <div>
+                    <p>A seasoned C-suite technology leader with extensive experience in managing large-scale technology transformations and product management. Currently, I serve as the Chief Technology Officer at Conduent, a global leader in digital interactions and business process outsourcing. With over 24 years of experience in the IT services industry, I have successfully delivered YOY revenue growth of 15%, optimized technology spend by 35%, and improved operating margins by 10%.</p>
+                    <p>I have been managing a portfolio of all Technology Products development and client implementation services and drive company's revenue growth with a solution and client centric approach. Played dual roles of CTO and CIO, overseeing technology products build, client implementations, and overall client-side IT services.</p>
+                    <p>My expertise spans across several key areas:</p>
+                    <ul>
+                        <li><strong>Digital Transformation:</strong> Leading the shift from transactional systems to digital platforms.</li>
+                        <li><strong>AI/ML Integration:</strong> Embedding AI and ML into core products to enhance functionality and value.</li>
+                        <li><strong>Cloud Native Product Engineering:</strong> Transitioning from lift-and-shift to cloud-native architectures.</li>
+                        <li><strong>Modular Architecture:</strong> Moving from monolithic structures to modular, flexible designs.</li>
+                        <li><strong>API & Microservices:</strong> Implementing API and microservices-based integration for seamless connectivity.</li>
+                    </ul>
+                    <p>Before joining Conduent, I held senior leadership roles at Capgemini, Infosys, and HCL, managing P&Ls of up to $1 billion. I have significant experience leading enterprise transformations across ERP, CRM, BI, HR, and EAI for clients in various industries. My core strength lies in aligning technology investments to drive revenue growth, improve profitability, and enhance quality for client retention.</p>
+                </div>
+            </div>
         </section>
     </div>
 
