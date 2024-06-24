@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahul Gupta - CTO | Technology Transformation Expert | Advisory Services</title>
-    <meta name="description" content="Rahul Gupta, CTO , offers expert advisory services in technology transformation, product modernization, and technology spend optimization.">
+    <meta name="description" content="Rahul Gupta, CTO at Conduent, offers expert advisory services in technology transformation, product modernization, and technology spend optimization.">
     <meta name="keywords" content="Rahul Gupta, CTO, Chief Technology Officer, technology transformation, product modernization, technology spend optimization, advisory services, CIO, CDO, executive leadership, digital transformation, IT management, AI integration, machine learning, Conduent, technology spend, operational efficiency, cloud adoption, data analytics, business transformation, product management, platform engineering, security compliance">
     <meta name="author" content="Rahul Gupta">
     <style>
@@ -23,8 +23,7 @@
         header {
             background: #333;
             color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
+            padding: 10px 0;
             border-bottom: #77a1d3 3px solid;
             display: flex;
             justify-content: space-between;
@@ -41,9 +40,13 @@
             list-style: none;
             display: flex;
             justify-content: center;
+            margin: 0;
         }
         header li {
-            padding: 0 20px;
+            padding: 0 15px;
+        }
+        header li:not(:last-child) {
+            border-right: 1px solid #fff;
         }
         header #branding {
             flex: 1;
@@ -62,10 +65,13 @@
             text-align: center;
             padding: 10px 0;
         }
+        nav #menuToggle {
+            display: none;
+        }
         nav #menu {
             display: none;
             position: absolute;
-            top: 70px;
+            top: 50px;
             right: 0;
             background: #333;
             color: #fff;
@@ -92,7 +98,7 @@
             header ul {
                 display: none;
             }
-            header #menuToggle {
+            nav #menuToggle {
                 display: block;
                 cursor: pointer;
                 padding: 10px;
@@ -102,7 +108,7 @@
                 font-size: 16px;
             }
             nav #menu {
-                display: none;
+                display: block;
                 width: 100%;
             }
             nav #menu ul {
@@ -143,7 +149,7 @@
     <header>
         <div id="branding">
             <h1>Rahul Gupta</h1>
-            <p>Chief Technology & Product Officer</p>
+            <p>Chief Technology Officer at Conduent</p>
         </div>
         <nav>
             <button id="menuToggle">☰ Menu</button>
