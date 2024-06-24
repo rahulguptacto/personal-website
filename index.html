@@ -44,6 +44,10 @@
         }
         header li {
             padding: 0 20px;
+            border-right: 1px solid #fff;
+        }
+        header li:last-child {
+            border-right: none;
         }
         header #branding {
             flex: 1;
@@ -71,6 +75,7 @@
             color: #fff;
             padding: 20px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
         }
         nav #menu ul {
             list-style: none;
@@ -78,6 +83,10 @@
         }
         nav #menu li {
             padding: 10px 0;
+            border-bottom: 1px solid #fff;
+        }
+        nav #menu li:last-child {
+            border-bottom: none;
         }
         @media (max-width: 768px) {
             .container {
@@ -98,6 +107,7 @@
             }
             nav #menu {
                 display: none;
+                width: 200px;
             }
         }
         .flex-container {
@@ -133,7 +143,7 @@
     <header>
         <div id="branding">
             <h1>Rahul Gupta</h1>
-            <p>Chief Technology & Product Officer</p>
+            <p>Chief Technology Officer at Conduent</p>
         </div>
         <nav>
             <button id="menuToggle">☰ Menu</button>
