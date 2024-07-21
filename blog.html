@@ -74,6 +74,25 @@
             text-decoration: none;
             font-size: 14px;
         }
+        .tab {
+            display: none;
+        }
+        .tab-label {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            background: #eee;
+            cursor: pointer;
+        }
+        .tab-content {
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .tab:checked + .tab-label + .tab-content {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -99,15 +118,16 @@
         <section id="blog" class="section">
             <h2>Blog</h2>
             <ol>
-                <li><a href="#blog4">Evolution for Enterprises from AI to GenAI</a></li>
-                <li><a href="#blog1">Key Trends in Technology Transformation</a></li>
-                <li><a href="#blog2">Optimizing Technology Spend: Strategies for Success</a></li>
-                <li><a href="#blog3">The Role of AI and ML in Modernizing Legacy Systems</a></li>
+                <li><a href="#blog4">1. Evolution for Enterprises from AI to GenAI</a></li>
+                <li><a href="#blog1">2. Key Trends in Technology Transformation</a></li>
+                <li><a href="#blog2">3. Optimizing Technology Spend: Strategies for Success</a></li>
+                <li><a href="#blog3">4. The Role of AI and ML in Modernizing Legacy Systems</a></li>
             </ol>
 
-            <!-- Blog 4 -->
-            <div id="blog4" class="section">
-                <h3>The Evolution from AI to GenAI</h3>
+            <input type="checkbox" id="tab4" class="tab">
+            <label class="tab-label" for="tab4">1. Evolution for Enterprises from AI to GenAI</label>
+            <div id="blog4" class="tab-content">
+                <h3>1. The Evolution from AI to GenAI</h3>
                 <p><strong>Artificial Intelligence (AI):</strong></p>
                 <p>AI encompasses a broad range of technologies that enable machines to mimic human intelligence. Traditional AI includes machine learning (ML) models that are trained to perform specific tasks such as image recognition, natural language processing (NLP), and predictive analytics. AI models improve over time through data exposure, learning patterns, and making data-driven decisions.</p>
         
@@ -168,9 +188,10 @@
                 </div>
             </div>
 
-            <!-- Blog 1 -->
-            <div id="blog1" class="section">
-                <h3>Key Trends in Technology Transformation</h3>
+            <input type="checkbox" id="tab1" class="tab">
+            <label class="tab-label" for="tab1">2. Key Trends in Technology Transformation</label>
+            <div id="blog1" class="tab-content">
+                <h3>2. Key Trends in Technology Transformation</h3>
                 <p>As technology continues to evolve at a rapid pace, staying ahead of the curve is crucial for businesses. Here are some of the key trends driving technology transformation in 2024:</p>
                 <ul>
                     <li><strong>Artificial Intelligence and Machine Learning:</strong> AI and ML are at the forefront of technology transformation. Businesses are leveraging these technologies to automate processes, gain insights from data, and enhance decision-making.</li>
@@ -185,9 +206,10 @@
                 </div>
             </div>
 
-            <!-- Blog 2 -->
-            <div id="blog2" class="section">
-                <h3>Optimizing Technology Spend: Strategies for Success</h3>
+            <input type="checkbox" id="tab2" class="tab">
+            <label class="tab-label" for="tab2">3. Optimizing Technology Spend: Strategies for Success</label>
+            <div id="blog2" class="tab-content">
+                <h3>3. Optimizing Technology Spend: Strategies for Success</h3>
                 <p>Optimizing technology spend is essential for maximizing ROI and ensuring sustainable growth. Here are some effective strategies for managing technology investments:</p>
                 <ul>
                     <li><strong>Conduct a Technology Audit:</strong> Regularly review your technology stack to identify redundant or underutilized assets. This helps in reallocating resources to more critical areas.</li>
@@ -201,9 +223,10 @@
                 </div>
             </div>
 
-            <!-- Blog 3 -->
-            <div id="blog3" class="section">
-                <h3>The Role of AI and ML in Modernizing Legacy Systems</h3>
+            <input type="checkbox" id="tab3" class="tab">
+            <label class="tab-label" for="tab3">4. The Role of AI and ML in Modernizing Legacy Systems</label>
+            <div id="blog3" class="tab-content">
+                <h3>4. The Role of AI and ML in Modernizing Legacy Systems</h3>
                 <p>Artificial intelligence (AI) and machine learning (ML) are powerful tools for modernizing legacy systems. Here are some ways these technologies can enhance efficiency and drive innovation:</p>
                 <ul>
                     <li><strong>Predictive Maintenance:</strong> AI and ML can analyze data from legacy systems to predict maintenance needs, reducing downtime and extending the lifespan of equipment.</li>
