@@ -159,16 +159,20 @@
                 });
             });
 
-            var hash = window.location.hash;
-            if (hash) {
-                var tabId = parseInt(hash.replace("#tab-", "")) - 1;
-                if (tabId >= 0 && tabId < tabs.length) {
-                    showTab(tabId);
+            function handleHashChange() {
+                var hash = window.location.hash;
+                if (hash) {
+                    var tabId = parseInt(hash.replace("#tab-", "")) - 1;
+                    if (tabId >= 0 && tabId < tabs.length) {
+                        showTab(tabId);
+                    }
+                } else {
+                    showTab(0);
                 }
-            } else {
-                // Initialize first tab as active if no hash
-                showTab(0);
             }
+
+            window.addEventListener("hashchange", handleHashChange);
+            handleHashChange(); // Call once on page load
         });
     </script>
 </head>
@@ -176,7 +180,7 @@
     <header>
         <div id="branding">
             <h1>Rahul Gupta</h1>
-            <p>Chief Technology Officer</p>
+            <p>Chief Technology and Information Officer</p>
         </div>
         <nav>
             <ul>
