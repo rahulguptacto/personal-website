@@ -142,22 +142,33 @@
             var tabs = document.querySelectorAll(".tab");
             var contents = document.querySelectorAll(".tab-content");
 
+            function showTab(index) {
+                tabs.forEach(function (tab) {
+                    tab.classList.remove("active");
+                });
+                contents.forEach(function (content) {
+                    content.classList.remove("active");
+                });
+                tabs[index].classList.add("active");
+                contents[index].classList.add("active");
+            }
+
             tabs.forEach(function (tab, index) {
                 tab.addEventListener("click", function () {
-                    tabs.forEach(function (tab) {
-                        tab.classList.remove("active");
-                    });
-                    contents.forEach(function (content) {
-                        content.classList.remove("active");
-                    });
-                    tabs[index].classList.add("active");
-                    contents[index].classList.add("active");
+                    showTab(index);
                 });
             });
 
-            // Initialize first tab as active
-            tabs[0].classList.add("active");
-            contents[0].classList.add("active");
+            var hash = window.location.hash;
+            if (hash) {
+                var tabId = parseInt(hash.replace("#tab-", "")) - 1;
+                if (tabId >= 0 && tabId < tabs.length) {
+                    showTab(tabId);
+                }
+            } else {
+                // Initialize first tab as active if no hash
+                showTab(0);
+            }
         });
     </script>
 </head>
