@@ -105,76 +105,46 @@
                 margin: 0 0 20px 0;
             }
         }
-        .back-to-top {
-            text-align: right;
-            margin-top: 20px;
-        }
-        .tab-container {
+        .tabs {
             display: flex;
             flex-wrap: wrap;
-            border-bottom: 1px solid #ddd;
-            margin-bottom: 20px;
         }
-        .tab {
-            padding: 10px;
-            cursor: pointer;
-            border: 1px solid #ddd;
-            border-bottom: none;
-            background-color: #f4f4f4;
+        .tabs label {
+            order: 1;
+            display: block;
+            padding: 10px 20px;
             margin-right: 5px;
+            cursor: pointer;
+            background: #333;
+            color: #fff;
+            border-radius: 5px 5px 0 0;
         }
-        .tab-content {
+        .tabs .tab-content {
+            order: 99;
+            flex-basis: 100%;
+            width: 100%;
             display: none;
             padding: 20px;
+            background: #fff;
             border: 1px solid #ddd;
-            border-top: none;
+            border-radius: 0 5px 5px 5px;
         }
-        .tab-content.active {
+        .tabs input[type="radio"] {
+            display: none;
+        }
+        .tabs input[type="radio"]:checked + label + .tab-content {
             display: block;
         }
-        .tab.active {
-            background-color: #fff;
-            border-bottom: 1px solid #fff;
+        .back-to-top {
+            margin-top: 20px;
+            text-align: right;
+        }
+        .back-to-top a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var tabs = document.querySelectorAll(".tab");
-            var contents = document.querySelectorAll(".tab-content");
-
-            function showTab(index) {
-                tabs.forEach(function (tab) {
-                    tab.classList.remove("active");
-                });
-                contents.forEach(function (content) {
-                    content.classList.remove("active");
-                });
-                tabs[index].classList.add("active");
-                contents[index].classList.add("active");
-            }
-
-            tabs.forEach(function (tab, index) {
-                tab.addEventListener("click", function () {
-                    showTab(index);
-                });
-            });
-
-            function handleHashChange() {
-                var hash = window.location.hash;
-                if (hash) {
-                    var tabId = parseInt(hash.replace("#tab-", "")) - 1;
-                    if (tabId >= 0 && tabId < tabs.length) {
-                        showTab(tabId);
-                    }
-                } else {
-                    showTab(0);
-                }
-            }
-
-            window.addEventListener("hashchange", handleHashChange);
-            handleHashChange(); // Call once on page load
-        });
-    </script>
 </head>
 <body>
     <header>
@@ -198,115 +168,115 @@
     <div class="container">
         <section id="blog" class="section">
             <h2>Blog</h2>
-            <ol>
-                <li><a href="#tab-1">Key Trends in Technology Transformation</a></li>
-                <li><a href="#tab-2">Optimizing Technology Spend: Strategies for Success</a></li>
-                <li><a href="#tab-3">The Role of AI and ML in Modernizing Legacy Systems</a></li>
-                <li><a href="#tab-4">Evolution for Enterprises from AI to GenAI</a></li>
-            </ol>
-
-            <div class="tab-container">
-                <div class="tab" data-tab="1">Technology Transformation</div>
-                <div class="tab" data-tab="2">Technology Spend Optimization</div>
-                <div class="tab" data-tab="3">AI and ML in Legacy Systems</div>
-                <div class="tab" data-tab="4">Evolution to GenAI</div>
-            </div>
-            <div id="tab-1" class="tab-content">
-                <h3>Key Trends in Technology Transformation</h3>
-                <p>As technology continues to evolve at a rapid pace, staying ahead of the curve is crucial for businesses. Here are some of the key trends driving technology transformation in 2024:</p>
-                <ul>
-                    <li><strong>Artificial Intelligence and Machine Learning:</strong> AI and ML are at the forefront of technology transformation. Businesses are leveraging these technologies to automate processes, gain insights from data, and enhance decision-making.</li>
-                    <li><strong>Cloud Computing:</strong> Cloud adoption continues to rise as organizations seek scalable and cost-effective solutions for their IT infrastructure. The shift to cloud is enabling greater flexibility and innovation.</li>
-                    <li><strong>Cybersecurity:</strong> With the increasing number of cyber threats, cybersecurity is a top priority. Companies are investing in advanced security measures to protect their data and systems.</li>
-                    <li><strong>IoT and Edge Computing:</strong> The Internet of Things (IoT) and edge computing are transforming industries by enabling real-time data processing and improving operational efficiency.</li>
-                    <li><strong>Blockchain Technology:</strong> Blockchain is gaining traction beyond cryptocurrencies. It's being used for secure transactions, supply chain transparency, and decentralized applications.</li>
-                </ul>
-                <div class="back-to-top"><a href="#blog">Back to top</a></div>
-            </div>
-
-            <div id="tab-2" class="tab-content">
-                <h3>Optimizing Technology Spend: Strategies for Success</h3>
-                <p>Optimizing technology spend is essential for maximizing ROI and ensuring sustainable growth. Here are some effective strategies for managing technology investments:</p>
-                <ul>
-                    <li><strong>Conduct a Technology Audit:</strong> Regularly review your technology stack to identify redundant or underutilized assets. This helps in reallocating resources to more critical areas.</li>
-                    <li><strong>Prioritize Investments:</strong> Focus on technology investments that align with your business goals and deliver the highest value. Prioritizing investments ensures that resources are allocated efficiently.</li>
-                    <li><strong>Leverage Cloud Solutions:</strong> Cloud computing offers scalability and cost savings. By moving to the cloud, you can reduce hardware costs and pay only for the resources you use.</li>
-                    <li><strong>Implement Automation:</strong> Automation can significantly reduce operational costs. Invest in automation tools to streamline processes and improve efficiency.</li>
-                </ul>
-                <div class="back-to-top"><a href="#blog">Back to top</a></div>
-            </div>
-
-            <div id="tab-3" class="tab-content">
-                <h3>The Role of AI and ML in Modernizing Legacy Systems</h3>
-                <p>Artificial intelligence (AI) and machine learning (ML) are powerful tools for modernizing legacy systems. Here are some ways these technologies can enhance efficiency and drive innovation:</p>
-                <ul>
-                    <li><strong>Predictive Maintenance:</strong> AI and ML can analyze data from legacy systems to predict maintenance needs, reducing downtime and extending the lifespan of equipment.</li>
-                    <li><strong>Process Automation:</strong> Automating repetitive tasks with AI and ML can improve efficiency and reduce the risk of human error. This frees up employees to focus on more strategic activities.</li>
-                    <li><strong>Enhanced Data Analytics:</strong> Legacy systems often hold vast amounts of data. AI and ML can unlock insights from this data, enabling better decision-making and identifying new business opportunities.</li>
-                    <li><strong>Improved Customer Experience:</strong> AI-powered chatbots and virtual assistants can provide instant support to customers, improving satisfaction and reducing the workload on customer service teams.</li>
-                    <li><strong>Security Enhancements:</strong> AI and ML can detect and respond to security threats in real-time, providing an additional layer of protection for legacy systems.</li>
-                </ul>
-                <div class="back-to-top"><a href="#blog">Back to top</a></div>
-            </div>
-
-            <div id="tab-4" class="tab-content">
-                <h3>Evolution for Enterprises from AI to GenAI</h3>
-                <p><strong>Artificial Intelligence (AI):</strong></p>
-                <p>AI encompasses a broad range of technologies that enable machines to mimic human intelligence. Traditional AI includes machine learning (ML) models that are trained to perform specific tasks such as image recognition, natural language processing (NLP), and predictive analytics. AI models improve over time through data exposure, learning patterns, and making data-driven decisions.</p>
+            <div class="tabs">
+                <input type="radio" name="tabs" id="tab1" checked>
+                <label for="tab1">1. Evolution for Enterprises from AI to GenAI</label>
+                <div id="tab-1" class="tab-content">
+                    <h3>The Evolution from AI to GenAI</h3>
+                    <p><strong>Artificial Intelligence (AI):</strong></p>
+                    <p>AI encompasses a broad range of technologies that enable machines to mimic human intelligence. Traditional AI includes machine learning (ML) models that are trained to perform specific tasks such as image recognition, natural language processing (NLP), and predictive analytics. AI models improve over time through data exposure, learning patterns, and making data-driven decisions.</p>
         
-                <p><strong>Generative AI (GenAI):</strong></p>
-                <p>GenAI, a subset of AI, uses LLMs to generate human-like text, images, and other content. Unlike traditional AI, which focuses on recognizing patterns and making predictions, GenAI can create new content by understanding context and semantics. GenAI models, such as GPT-3 by OpenAI, leverage massive datasets and powerful cloud computing resources to produce sophisticated outputs.</p>
+                    <p><strong>Generative AI (GenAI):</strong></p>
+                    <p>GenAI, a subset of AI, uses LLMs to generate human-like text, images, and other content. Unlike traditional AI, which focuses on recognizing patterns and making predictions, GenAI can create new content by understanding context and semantics. GenAI models, such as GPT-3 by OpenAI, leverage massive datasets and powerful cloud computing resources to produce sophisticated outputs.</p>
         
-                <h4>Differences between AI and GenAI</h4>
-                <ul>
-                    <li><strong>Functionality:</strong></li>
+                    <h4>Differences between AI and GenAI</h4>
                     <ul>
-                        <li>AI: Primarily focused on classification, prediction, and optimization tasks.</li>
-                        <li>GenAI: Capable of generating creative content, simulating human-like interactions, and providing context-aware responses.</li>
+                        <li><strong>Functionality:</strong></li>
+                        <ul>
+                            <li>AI: Primarily focused on classification, prediction, and optimization tasks.</li>
+                            <li>GenAI: Capable of generating creative content, simulating human-like interactions, and providing context-aware responses.</li>
+                        </ul>
+        
+                        <li><strong>Data Requirements:</strong></li>
+                        <ul>
+                            <li>AI: Requires structured data for training specific models.</li>
+                            <li>GenAI: Utilizes vast amounts of unstructured data to train large-scale models.</li>
+                        </ul>
+        
+                        <li><strong>Use Cases:</strong></li>
+                        <ul>
+                            <li>AI: Predictive maintenance, fraud detection, personalized recommendations.</li>
+                            <li>GenAI: Content creation, automated customer support, virtual assistants.</li>
+                        </ul>
                     </ul>
         
-                    <li><strong>Data Requirements:</strong></li>
+                    <h4>Strategic Steps for Companies to Adopt GenAI</h4>
                     <ul>
-                        <li>AI: Requires structured data for training specific models.</li>
-                        <li>GenAI: Utilizes vast amounts of unstructured data to train large-scale models.</li>
+                        <li><strong>Understand Business Objectives:</strong> Align GenAI initiatives with business goals such as revenue growth, profitability, and customer satisfaction. Identify specific areas where GenAI can add value.</li>
+                        <li><strong>Invest in Infrastructure:</strong> Leverage cloud platforms to access the computational power required for training and deploying GenAI models. Ensure data privacy and compliance with regulatory standards.</li>
+                        <li><strong>Develop a Skilled Team:</strong> Hire or train professionals with expertise in AI, data science, and cloud computing. Foster a culture of continuous learning and innovation.</li>
+                        <li><strong>Pilot and Scale:</strong> Start with pilot projects to validate the potential of GenAI. Scale successful initiatives across the organization.</li>
                     </ul>
         
-                    <li><strong>Use Cases:</strong></li>
+                    <h4>Use Cases of GenAI in Various Industries</h4>
                     <ul>
-                        <li>AI: Predictive maintenance, fraud detection, personalized recommendations.</li>
-                        <li>GenAI: Content creation, automated customer support, virtual assistants.</li>
+                        <li><strong>Health Care:</strong> GenAI can assist in medical research by generating hypotheses and identifying patterns in clinical data. Virtual health assistants can provide personalized patient support and automate administrative tasks.</li>
+                        <li><strong>Financial Services:</strong> GenAI can enhance fraud detection by analyzing transaction patterns and generating risk profiles. Automated financial advisors can provide personalized investment recommendations.</li>
+                        <li><strong>Call Centers:</strong> GenAI-powered chatbots can handle routine customer inquiries, freeing up human agents for complex issues. Sentiment analysis can improve customer service by understanding and responding to customer emotions.</li>
+                        <li><strong>Transportation:</strong> GenAI can optimize route planning and traffic management by generating real-time insights. Autonomous vehicles can benefit from GenAI for navigation and decision-making.</li>
+                        <li><strong>HRO/TBO:</strong> GenAI can streamline HR processes by automating resume screening and generating job descriptions. Employee training programs can be enhanced with personalized learning content generated by GenAI.</li>
                     </ul>
-                </ul>
         
-                <h4>Strategic Steps for Companies to Adopt GenAI</h4>
-                <ul>
-                    <li><strong>Understand Business Objectives:</strong> Align GenAI initiatives with business goals such as revenue growth, profitability, and customer satisfaction. Identify specific areas where GenAI can add value.</li>
-                    <li><strong>Invest in Infrastructure:</strong> Leverage cloud platforms to access the computational power required for training and deploying GenAI models. Ensure data privacy and compliance with regulatory standards.</li>
-                    <li><strong>Develop a Skilled Team:</strong> Hire or train professionals with expertise in AI, data science, and cloud computing. Foster a culture of continuous learning and innovation.</li>
-                    <li><strong>Pilot and Scale:</strong> Start with pilot projects to validate the potential of GenAI. Scale successful initiatives across the organization.</li>
-                </ul>
+                    <h4>Key Open Source Technologies for Adopting GenAI</h4>
+                    <ul>
+                        <li><strong>TensorFlow and PyTorch:</strong> Leading open-source libraries for building and training AI and GenAI models.</li>
+                        <li><strong>Hugging Face Transformers:</strong> Provides pre-trained models and tools for natural language processing tasks.</li>
+                        <li><strong>Apache MXNet:</strong> Scalable deep learning framework that supports LLM training.</li>
+                    </ul>
         
-                <h4>Use Cases of GenAI in Various Industries</h4>
-                <ul>
-                    <li><strong>Health Care:</strong> GenAI can assist in medical research by generating hypotheses and identifying patterns in clinical data. Virtual health assistants can provide personalized patient support and automate administrative tasks.</li>
-                    <li><strong>Financial Services:</strong> GenAI can enhance fraud detection by analyzing transaction patterns and generating risk profiles. Automated financial advisors can provide personalized investment recommendations.</li>
-                    <li><strong>Call Centers:</strong> GenAI-powered chatbots can handle routine customer inquiries, freeing up human agents for complex issues. Sentiment analysis can improve customer service by understanding and responding to customer emotions.</li>
-                    <li><strong>Transportation:</strong> GenAI can optimize route planning and traffic management by generating real-time insights. Autonomous vehicles can benefit from GenAI for navigation and decision-making.</li>
-                    <li><strong>HRO/TBO:</strong> GenAI can streamline HR processes by automating resume screening and generating job descriptions. Employee training programs can be enhanced with personalized learning content generated by GenAI.</li>
-                </ul>
+                    <p><strong>OpenAI:</strong> OpenAI's GPT models can complement enterprise GenAI efforts by providing state-of-the-art language models that can be fine-tuned for specific applications. OpenAI's APIs allow seamless integration of GenAI capabilities into existing systems.</p>
         
-                <h4>Key Open Source Technologies for Adopting GenAI</h4>
-                <ul>
-                    <li><strong>TensorFlow and PyTorch:</strong> Leading open-source libraries for building and training AI and GenAI models.</li>
-                    <li><strong>Hugging Face Transformers:</strong> Provides pre-trained models and tools for natural language processing tasks.</li>
-                    <li><strong>Apache MXNet:</strong> Scalable deep learning framework that supports LLM training.</li>
-                </ul>
-        
-                <p><strong>OpenAI:</strong> OpenAI's GPT models can complement enterprise GenAI efforts by providing state-of-the-art language models that can be fine-tuned for specific applications. OpenAI's APIs allow seamless integration of GenAI capabilities into existing systems.</p>
-        
-                <h4>Conclusion</h4>
-                <p>The transition from AI to GenAI represents a significant leap forward in the capabilities of intelligent systems. By understanding the differences, strategically adopting GenAI, and leveraging open-source technologies, companies can harness the power of GenAI to drive innovation and achieve their business objectives.</p>
-                <div class="back-to-top"><a href="#blog">Back to top</a></div>
+                    <h4>Conclusion</h4>
+                    <p>The transition from AI to GenAI represents a significant leap forward in the capabilities of intelligent systems. By understanding the differences, strategically adopting GenAI, and leveraging open-source technologies, companies can harness the power of GenAI to drive innovation and achieve their business objectives.</p>
+                    <div class="back-to-top"><a href="#blog">Back to top</a></div>
+                </div>
+
+                <input type="radio" name="tabs" id="tab2">
+                <label for="tab2">2. Key Trends in Technology Transformation</label>
+                <div id="tab-2" class="tab-content">
+                    <h3>Key Trends in Technology Transformation</h3>
+                    <p>As technology continues to evolve at a rapid pace, staying ahead of the curve is crucial for businesses. Here are some of the key trends driving technology transformation in 2024:</p>
+                    <ul>
+                        <li><strong>Artificial Intelligence and Machine Learning:</strong> AI and ML are at the forefront of technology transformation. Businesses are leveraging these technologies to automate processes, gain insights from data, and enhance decision-making.</li>
+                        <li><strong>Cloud Computing:</strong> Cloud adoption continues to rise as organizations seek scalable and cost-effective solutions for their IT infrastructure. The shift to cloud is enabling greater flexibility and innovation.</li>
+                        <li><strong>Cybersecurity:</strong> With the increasing number of cyber threats, cybersecurity is a top priority. Companies are investing in advanced security measures to protect their data and systems.</li>
+                        <li><strong>IoT and Edge Computing:</strong> The Internet of Things (IoT) and edge computing are transforming industries by enabling real-time data processing and improving operational efficiency.</li>
+                        <li><strong>Blockchain Technology:</strong> Blockchain is gaining traction beyond cryptocurrencies. It's being used for secure transactions, supply chain transparency, and decentralized applications.</li>
+                    </ul>
+                    <p>Staying informed about these trends and incorporating them into your technology strategy can help your business remain competitive and innovative.</p>
+                    <div class="back-to-top"><a href="#blog">Back to top</a></div>
+                </div>
+
+                <input type="radio" name="tabs" id="tab3">
+                <label for="tab3">3. Optimizing Technology Spend: Strategies for Success</label>
+                <div id="tab-3" class="tab-content">
+                    <h3>Optimizing Technology Spend: Strategies for Success</h3>
+                    <p>Optimizing technology spend is essential for maximizing ROI and ensuring sustainable growth. Here are some effective strategies for managing technology investments:</p>
+                    <ul>
+                        <li><strong>Conduct a Technology Audit:</strong> Regularly review your technology stack to identify redundant or underutilized assets. This helps in reallocating resources to more critical areas.</li>
+                        <li><strong>Prioritize Investments:</strong> Focus on technology investments that align with your business goals and deliver the highest value. Prioritizing investments ensures that resources are allocated efficiently.</li>
+                        <li><strong>Leverage Cloud Solutions:</strong> Cloud computing offers scalability and cost savings. By moving to the cloud, you can reduce hardware costs and pay only for the resources you use.</li>
+                        <li><strong>Implement Automation:</strong> Automation can significantly reduce operational costs. Invest in automation tools to streamline processes and improve efficiency.</li>
+                    </ul>
+                    <p>By implementing these strategies, businesses can optimize their technology spend, enhance operational efficiency, and drive sustainable growth.</p>
+                    <div class="back-to-top"><a href="#blog">Back to top</a></div>
+                </div>
+
+                <input type="radio" name="tabs" id="tab4">
+                <label for="tab4">4. The Role of AI and ML in Modernizing Legacy Systems</label>
+                <div id="tab-4" class="tab-content">
+                    <h3>The Role of AI and ML in Modernizing Legacy Systems</h3>
+                    <p>Artificial intelligence (AI) and machine learning (ML) are powerful tools for modernizing legacy systems. Here are some ways these technologies can enhance efficiency and drive innovation:</p>
+                    <ul>
+                        <li><strong>Predictive Maintenance:</strong> AI and ML can analyze data from legacy systems to predict maintenance needs, reducing downtime and extending the lifespan of equipment.</li>
+                        <li><strong>Process Automation:</strong> Automating repetitive tasks with AI and ML can improve efficiency and reduce the risk of human error. This frees up employees to focus on more strategic activities.</li>
+                        <li><strong>Enhanced Data Analytics:</strong> Legacy systems often hold vast amounts of data. AI and ML can unlock insights from this data, enabling better decision-making and identifying new business opportunities.</li>
+                        <li><strong>Improved Customer Experience:</strong> AI-powered chatbots and virtual assistants can provide instant support to customers, improving satisfaction and reducing the workload on customer service teams.</li>
+                        <li><strong>Security Enhancements:</strong> AI and ML can detect and respond to security threats in real-time, providing an additional layer of protection for legacy systems.</li>
+                    </ul>
+                    <p>By integrating AI and ML into legacy systems, businesses can drive innovation, improve efficiency, and stay competitive in a rapidly changing technological landscape.</p>
+                    <div class="back-to-top"><a href="#blog">Back to top</a></div>
+                </div>
             </div>
         </section>
     </div>
