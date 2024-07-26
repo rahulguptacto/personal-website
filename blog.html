@@ -106,7 +106,7 @@
         }
 
         .tabs input[type="radio"]:checked+label+.tab-content {
-            display: none;
+            display: block;
         }
 
         .back-to-top a {
@@ -141,7 +141,7 @@
             <h2>Blog</h2>
             <div class="tabs">
                 <input type="radio" name="tabs" id="tab1">
-                <label for="tab1">1. Technology Transformation in the Modern Age</label>
+                <label for="tab1" onclick="openTab('tab1')">1. Technology Transformation in the Modern Age</label>
                 <div id="tab-1" class="tab-content">
                     <h3>Technology Transformation in the Modern Age</h3>
                     <p>In the modern age, technology transformation is pivotal for enterprises to stay competitive and relevant. Here are some key aspects of technology transformation:</p>
@@ -156,7 +156,7 @@
                 </div>
 
                 <input type="radio" name="tabs" id="tab2">
-                <label for="tab2">2. Cybersecurity in the Age of Digital Transformation</label>
+                <label for="tab2" onclick="openTab('tab2')">2. Cybersecurity in the Age of Digital Transformation</label>
                 <div id="tab-2" class="tab-content">
                     <h3>Cybersecurity in the Age of Digital Transformation</h3>
                     <p>As digital transformation accelerates, cybersecurity becomes increasingly critical. Here are key strategies to enhance cybersecurity:</p>
@@ -171,7 +171,7 @@
                 </div>
 
                 <input type="radio" name="tabs" id="tab3">
-                <label for="tab3">3. Evolution for Enterprises from AI to GenAI</label>
+                <label for="tab3" onclick="openTab('tab3')">3. Evolution for Enterprises from AI to GenAI</label>
                 <div id="tab-3" class="tab-content">
                     <h3>The Evolution from AI to GenAI</h3>
                     <p><strong>Artificial Intelligence (AI):</strong></p>
@@ -234,7 +234,7 @@
                 </div>
 
                 <input type="radio" name="tabs" id="tab4">
-                <label for="tab4">4. The Role of AI and ML in Modernizing Legacy Systems</label>
+                <label for="tab4" onclick="openTab('tab4')">4. The Role of AI and ML in Modernizing Legacy Systems</label>
                 <div id="tab-4" class="tab-content">
                     <h3>The Role of AI and ML in Modernizing Legacy Systems</h3>
                     <p>Artificial intelligence (AI) and machine learning (ML) are powerful tools for modernizing legacy systems. Here are some ways these technologies can enhance efficiency and drive innovation:</p>
@@ -250,7 +250,7 @@
                 </div>
 
                 <input type="radio" name="tabs" id="tab5">
-                <label for="tab5">5. Key Trends in Technology Transformation</label>
+                <label for="tab5" onclick="openTab('tab5')">5. Key Trends in Technology Transformation</label>
                 <div id="tab-5" class="tab-content">
                     <h3>Key Trends in Technology Transformation</h3>
                     <p>As technology continues to evolve at a rapid pace, staying ahead of the curve is crucial for businesses. Here are some of the key trends driving technology transformation in 2024:</p>
@@ -266,7 +266,7 @@
                 </div>
 
                 <input type="radio" name="tabs" id="tab6">
-                <label for="tab6">6. Optimizing Technology Spend: Strategies for Success</label>
+                <label for="tab6" onclick="openTab('tab6')">6. Optimizing Technology Spend: Strategies for Success</label>
                 <div id="tab-6" class="tab-content">
                     <h3>Optimizing Technology Spend: Strategies for Success</h3>
                     <p>Optimizing technology spend is essential for maximizing ROI and ensuring sustainable growth. Here are some effective strategies for managing technology investments:</p>
@@ -293,6 +293,10 @@
             for (var i = 0; i < tabs.length; i++) {
                 tabs[i].checked = false;
             }
+        }
+
+        function openTab(tabId) {
+            document.getElementById(tabId).checked = true;
         }
     </script>
 </body>
