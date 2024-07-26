@@ -65,20 +65,34 @@
             text-align: center;
             padding: 10px 0;
         }
-        .flex-container {
-            display: flex;
-            align-items: flex-start;
-            flex-wrap: wrap;
+        .tab-label {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            display: block;
+            margin-bottom: 5px;
         }
-        .flex-container img {
-            width: 150px;
-            height: auto;
-            border-radius: 50%;
-            margin-right: 20px;
-            flex-shrink: 0;
+        .tab-content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #333;
+            margin-bottom: 10px;
         }
-        .flex-container div {
-            flex: 1;
+        .tab:checked + .tab-label {
+            background: #77a1d3;
+            color: #333;
+        }
+        .tab:checked + .tab-label + .tab-content {
+            display: block;
+        }
+        .back-to-top {
+            display: block;
+            margin-top: 20px;
+            text-align: right;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
         }
         @media (max-width: 768px) {
             .container {
@@ -96,42 +110,6 @@
                 padding: 10px 0;
                 border: none;
             }
-            .flex-container {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .flex-container img {
-                margin: 0 0 20px 0;
-            }
-        }
-        .tab {
-            display: none;
-        }
-        .tab-label {
-            display: block;
-            padding: 10px;
-            background: #f4f4f4;
-            border: 1px solid #ddd;
-            cursor: pointer;
-            margin-bottom: -1px;
-        }
-        .tab-content {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-top: none;
-        }
-        input[type="checkbox"] {
-            display: none;
-        }
-        input[type="checkbox"]:checked + .tab-label + .tab-content {
-            display: block;
-        }
-        .back-to-top {
-            display: block;
-            margin-top: 20px;
-            text-align: right;
         }
     </style>
 </head>
@@ -139,7 +117,7 @@
     <header>
         <div id="branding">
             <h1>Rahul Gupta</h1>
-            <p>Chief Technology and Information Officer</p>
+            <p>Chief Technology Officer</p>
         </div>
         <nav>
             <ul>
@@ -161,86 +139,44 @@
                 <input type="checkbox" id="tab-1" class="tab">
                 <label for="tab-1" class="tab-label">Revolutionizing Real-Time Payments</label>
                 <div class="tab-content">
-                    <p>Real time Payments are shaping the world of finance.</p>
-                    <p>The evolution of payment systems has been remarkable yet it remains fraught with persistent challenges. From bartering goods to using coins and now to digital transactions each era has sought to simplify how we exchange value.</p>
-                    <p>Even with these advancements delays discrepancies and inefficiencies persist impacting businesses and consumers alike.</p>
-                    <p>The concept of Real-Time Payments (RTP) emerges as a game-changer. Once unimaginable, RTP is now beginning to revolutionize the way we handle transactions.</p>
-                    <p>The significance of RTP extends beyond innovation; it’s about making a tangible difference in people's lives.</p>
-                    <p>In my journey exploring and implementing RTP I have identified several key lessons:</p>
+                    <p>Real-time payments have reshaped the financial landscape, offering speed and convenience like never before. Here are some insights on how this technology is transforming transactions:</p>
                     <ul>
-                        <li>Security First: Customers prioritize security over convenience</li>
-                        <li>Ecosystem Building: Collaboration within financial institutions is crucial</li>
-                        <li>Complementary Approach: RTP should complement existing payment systems not replace them entirely</li>
-                        <li>Connected Platform Approach: RTP is about enabling secure real time payments on a ledger-based platform connected seamlessly to partner financial institutions and suppliers or agencies.</li>
+                        <li><strong>Instant Transactions:</strong> Real-time payments enable instant money transfers, reducing the settlement time from days to seconds.</li>
+                        <li><strong>Enhanced Customer Experience:</strong> Faster payments improve customer satisfaction and loyalty, providing immediate access to funds.</li>
+                        <li><strong>Cost Efficiency:</strong> By reducing the need for intermediaries, real-time payments lower transaction costs for businesses and consumers alike.</li>
+                        <li><strong>Increased Security:</strong> Advanced security protocols in real-time payment systems enhance transaction safety, mitigating fraud risks.</li>
+                        <li><strong>Financial Inclusion:</strong> Real-time payments facilitate greater financial inclusion by providing underserved populations with access to instant transactions.</li>
                     </ul>
-                    <p>Scale is the real power as demonstrated by success of UPI in India and now US is going to lead innovation in this space with recent Fed announcements.</p>
-                    <p>Real-Time Payments address these issues comprehensively. It ensures secure transactions with advanced encryption and fraud detection mechanisms addressing the supreme concern of security.</p>
-                    <p>By fostering collaboration with financial institutions RTP creates a seamless network streamlining the payment process.</p>
-                    <p>This technology promotes financial inclusion for unbanked and underbanked populations leveling the playing field for all. Instant transactions enhance cash flow, reduce errors and significantly improve customer satisfaction.</p>
-                    <p>How is your organization innovating in payments? What challenges and opportunities do you foresee? Let’s continue this conversation and shape the future of finance together.</p>
-                    <p>#realtimepayments #innovation #finance #futureofpayments #linkedin</p>
+                    <p>Businesses must adapt to the growing demand for real-time payments to stay competitive and meet customer expectations. Integrating real-time payment solutions can drive efficiency, security, and customer satisfaction.</p>
                     <a href="#top" class="back-to-top">Back to top</a>
                 </div>
             </article>
-
             <article>
                 <input type="checkbox" id="tab-2" class="tab">
-                <label for="tab-2" class="tab-label">The Day you Fired your Servers and Hired Cloud</label>
+                <label for="tab-2" class="tab-label">The Day You Fired Your Servers and Hired Cloud</label>
                 <div class="tab-content">
-                    <p>In an era where digital agility defines market leadership how effectively is your enterprise infrastructure & products / platforms/ applications positioned to drive innovation and sustain competitive advantage?</p>
-                    <p>Are you grappling with the challenges of outdated servers and escalating maintenance costs in today's digital dynamic?</p>
-                    <p>In the current era of digital acceleration many organizations face the daunting challenges of maintaining outdated server systems and coping with escalating maintenance costs. These legacy infrastructures not only strain financial resources but also hinder operational agility and innovation.</p>
-                    <p>To address these challenges effectively a strategic migration to cloud computing emerges as the optimal solution.</p>
-                    <p>Cloud-based solutions offer scalability flexibility and enhanced security paving the way for sustainable growth and operational efficiency.</p>
-                    <p>However this journey towards cloud adoption presents its own unique challenges.</p>
+                    <p>Cloud computing has revolutionized the way businesses operate, offering unparalleled flexibility, scalability, and cost-efficiency. Transitioning from traditional servers to the cloud can significantly enhance operational capabilities:</p>
                     <ul>
-                        <li>Unsustainable costs from managing multiple data centers.</li>
-                        <li>System vulnerabilities leading to operational instability.</li>
-                        <li>Fragmented infrastructure hindering unified data exchange.</li>
+                        <li><strong>Scalability:</strong> Cloud infrastructure allows businesses to scale resources up or down based on demand, ensuring optimal performance without overprovisioning.</li>
+                        <li><strong>Cost Efficiency:</strong> Pay-as-you-go pricing models eliminate the need for large capital investments in hardware, reducing overall IT costs.</li>
+                        <li><strong>Enhanced Collaboration:</strong> Cloud platforms facilitate seamless collaboration among teams, providing access to data and applications from anywhere in the world.</li>
+                        <li><strong>Business Continuity:</strong> Cloud solutions offer robust disaster recovery and backup options, ensuring data protection and business continuity in case of disruptions.</li>
+                        <li><strong>Security:</strong> Leading cloud providers invest heavily in security measures, offering advanced protection against cyber threats and data breaches.</li>
                     </ul>
-                    <p>To navigate these challenges effectively organizations must embrace a well-crafted cloud migration strategy:</p>
-                    <ul>
-                        <li>Cloud Agnostic: Leveraging open-source technologies and cloud-agnostic tools to ensure flexibility and avoid vendor lock-in. Kubernetes, Docker or equivalent containerized applications, products, platforms to be cloud agnostic.</li>
-                        <li>Cloud-Native Applications: Redesigning applications to be cloud-native integrating security into data models and APIs from inception.</li>
-                        <li>Standardized Data Model Design: Developing industry-standard data models to facilitate seamless ecosystem integration and data exchange.</li>
-                    </ul>
-                    <p>Cloud migration promises substantial benefits including reduced operational costs heightened system stability and the creation of a unified data ecosystem conducive to informed decision-making and strategic growth.</p>
-                    <p>For instance in tolling transactions cloud computing facilitates real-time data processing and integration for billion+ transactions in a day improving efficiency and accuracy.</p>
-                    <p>In Health care cloud native applications can be used to process millions of claims and create an effective data exchange between Payers Provider and Pharma something that is heavily guarded today.</p>
-                    <p>Federation and de-regulation to enable data exchange between all Healthcare Constituents is key to improve quality and cost of health care in our country. In Financial services similar use cases can be applied for check processing fraud prevention and payment disbursements.</p>
-                    <p>This capability also strengthens device intelligence leveraging sensors to combat transit fraud through advanced data analytics and secure transaction monitoring systems.</p>
-                    <p>As digital transformation accelerates it is imperative for businesses to assess their current infrastructure's and applications / product/ platforms adaptability to meet the evolving demands of a cloud-driven landscape.</p>
-                    <p>Are you considering a shift to the cloud? Then follow the above guiding principles to not end up with Lift m Shift and increase of TCO due to poor approach & design.</p>
+                    <p>Transitioning to the cloud is not just about technology; it’s about transforming business operations to be more agile, efficient, and innovative. Embracing cloud computing is a strategic move that can drive long-term growth and success.</p>
+                    <p>For instance, in tolling transactions, cloud computing facilitates real-time data processing and integration for billion+ transactions in a day, improving efficiency and accuracy.</p>
+                    <p>In healthcare, cloud-native applications can be used to process millions of claims and create effective data exchange between payers, providers, and pharma, something that is heavily guarded today.</p>
+                    <p>Federation and de-regulation to enable data exchange between all healthcare constituents is key to improving the quality and cost of healthcare in our country. In financial services, similar use cases can be applied for check processing, fraud prevention, and payment disbursements.</p>
+                    <p>This capability also strengthens device intelligence, leveraging sensors to combat transit fraud through advanced data analytics and secure transaction monitoring systems.</p>
+                    <p>As digital transformation accelerates, it is imperative for businesses to assess their current infrastructure's and applications/products/platforms' adaptability to meet the evolving demands of a cloud-driven landscape.</p>
+                    <p>Are you considering a shift to the cloud? Then follow the above guiding principles to not end up with Lift & Shift and increase of TCO due to poor approach & design.</p>
                     <p>#CloudComputing #DigitalTransformation #BusinessStrategy</p>
                     <a href="#top" class="back-to-top">Back to top</a>
                 </div>
             </article>
-
             <article>
                 <input type="checkbox" id="tab-3" class="tab">
-                <label for="tab-3" class="tab-label">Re-platforming Strategies: Design-First Approaches for Effective Cloud Engineering</label>
-                <div class="tab-content">
-                    <p>Are you cramped with traditional re-platforming methods that often lead to delays and increased costs?</p>
-                    <p>Amidst the rapid evolution of digital technologies many professionals find themselves cast down with traditional re-platforming methods. These approaches often lead to prolonged project timelines and unexpected cost escalations hindering innovation and efficiency.</p>
-                    <p>Imagine a cloud strategy that goes beyond mere migration—it transforms applications from the ground up.</p>
-                    <p>This isn't a futuristic dream; it's the practical application of design-first cloud engineering.</p>
-                    <p>Designing with cloud-specific use cases ensures applications are optimized for scalability and performance.</p>
-                    <ul>
-                        <li>Embracing modularity with Kubernetes enhances flexibility and enables seamless scaling.</li>
-                        <li>Security integrated into every design decision safeguards data integrity.</li>
-                        <li>Smart scaling challenges cloud cost assumptions optimizing resource allocation with real-time analytics.</li>
-                    </ul>
-                    <p>By implementing this organizations transition from simple re-platforming to evolutionary leaps in resilience efficiency and readiness for future growth.</p>
-                    <p>This strategic shift empowers businesses to harness the true potential of the cloud driving innovation and strategic advantage in today's competitive landscape.</p>
-                    <p>Ready to transform your cloud strategy and unlock its full potential?</p>
-                    <p>#CloudEngineering #DesignThinking #TechInnovation</p>
-                    <a href="#top" class="back-to-top">Back to top</a>
-                </div>
-            </article>
-
-            <article>
-                <input type="checkbox" id="tab-4" class="tab">
-                <label for="tab-4" class="tab-label">The Evolution from AI to GenAI</label>
+                <label for="tab-3" class="tab-label">The Evolution from AI to GenAI</label>
                 <div class="tab-content">
                     <p><strong>Artificial Intelligence (AI):</strong></p>
                     <p>AI encompasses a broad range of technologies that enable machines to mimic human intelligence. Traditional AI includes machine learning (ML) models that are trained to perform specific tasks such as image recognition, natural language processing (NLP), and predictive analytics. AI models improve over time through data exposure, learning patterns, and making data-driven decisions.</p>
@@ -302,8 +238,8 @@
             </article>
 
             <article>
-                <input type="checkbox" id="tab-5" class="tab">
-                <label for="tab-5" class="tab-label">Key Trends in Technology Transformation</label>
+                <input type="checkbox" id="tab-4" class="tab">
+                <label for="tab-4" class="tab-label">Key Trends in Technology Transformation</label>
                 <div class="tab-content">
                     <h3>Key Trends in Technology Transformation</h3>
                     <p>As technology continues to evolve at a rapid pace, staying ahead of the curve is crucial for businesses. Here are some of the key trends driving technology transformation in 2024:</p>
@@ -320,8 +256,8 @@
             </article>
 
             <article>
-                <input type="checkbox" id="tab-6" class="tab">
-                <label for="tab-6" class="tab-label">Optimizing Technology Spend: Strategies for Success</label>
+                <input type="checkbox" id="tab-5" class="tab">
+                <label for="tab-5" class="tab-label">Optimizing Technology Spend: Strategies for Success</label>
                 <div class="tab-content">
                     <h3>Optimizing Technology Spend: Strategies for Success</h3>
                     <p>Optimizing technology spend is essential for maximizing ROI and ensuring sustainable growth. Here are some effective strategies for managing technology investments:</p>
@@ -337,8 +273,8 @@
             </article>
 
             <article>
-                <input type="checkbox" id="tab-7" class="tab">
-                <label for="tab-7" class="tab-label">The Role of AI and ML in Modernizing Legacy Systems</label>
+                <input type="checkbox" id="tab-6" class="tab">
+                <label for="tab-6" class="tab-label">The Role of AI and ML in Modernizing Legacy Systems</label>
                 <div class="tab-content">
                     <h3>The Role of AI and ML in Modernizing Legacy Systems</h3>
                     <p>Artificial intelligence (AI) and machine learning (ML) are powerful tools for modernizing legacy systems. Here are some ways these technologies can enhance efficiency and drive innovation:</p>
