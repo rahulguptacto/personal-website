@@ -26,7 +26,7 @@
             padding: 10px 0;
             border-bottom: #77a1d3 3px solid;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
         }
         header a {
@@ -50,13 +50,9 @@
         }
         header #branding {
             flex: 1;
-            text-align: center;
+            text-align: center; /* Center-align the header content */
         }
-        header #branding h1 {
-            margin: 0;
-        }
-
-        header #branding p {
+        header #branding h1, header #branding p {
             margin: 0;
         }
         .section {
@@ -79,24 +75,22 @@
             text-decoration: none;
             font-size: 14px;
         }
-        .tab {
-            display: none;
-        }
-        .tab-label {
-            display: block;
-            padding: 10px;
-            margin: 5px 0;
-            background: #eee;
-            cursor: pointer;
-        }
-        .tab-content {
-            padding: 20px;
-            background: #fff;
-            border: 1px solid #ddd;
-            margin-bottom: 10px;
-        }
-        .tab:checked + .tab-label + .tab-content {
-            display: block;
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                margin: auto;
+            }
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            header ul {
+                flex-direction: column;
+            }
+            header li {
+                padding: 10px 0;
+                border: none;
+            }
         }
     </style>
 </head>
@@ -129,10 +123,9 @@
                 <li><a href="#blog3">The Role of AI and ML in Modernizing Legacy Systems</a></li>
             </ol>
 
-            <input type="checkbox" id="tab4" class="tab">
-            <label class="tab-label" for="tab4">1. Evolution for Enterprises from AI to GenAI</label>
-            <div id="blog4" class="tab-content">
-                <h3>1. The Evolution from AI to GenAI</h3>
+            <!-- Blog 4 -->
+            <div id="blog4" class="section">
+                <h3>1. Evolution for Enterprises from AI to GenAI</h3>
                 <p><strong>Artificial Intelligence (AI):</strong></p>
                 <p>AI encompasses a broad range of technologies that enable machines to mimic human intelligence. Traditional AI includes machine learning (ML) models that are trained to perform specific tasks such as image recognition, natural language processing (NLP), and predictive analytics. AI models improve over time through data exposure, learning patterns, and making data-driven decisions.</p>
         
@@ -193,9 +186,8 @@
                 </div>
             </div>
 
-            <input type="checkbox" id="tab1" class="tab">
-            <label class="tab-label" for="tab1">2. Key Trends in Technology Transformation</label>
-            <div id="blog1" class="tab-content">
+            <!-- Blog 1 -->
+            <div id="blog1" class="section">
                 <h3>2. Key Trends in Technology Transformation</h3>
                 <p>As technology continues to evolve at a rapid pace, staying ahead of the curve is crucial for businesses. Here are some of the key trends driving technology transformation in 2024:</p>
                 <ul>
@@ -211,9 +203,8 @@
                 </div>
             </div>
 
-            <input type="checkbox" id="tab2" class="tab">
-            <label class="tab-label" for="tab2">3. Optimizing Technology Spend: Strategies for Success</label>
-            <div id="blog2" class="tab-content">
+            <!-- Blog 2 -->
+            <div id="blog2" class="section">
                 <h3>3. Optimizing Technology Spend: Strategies for Success</h3>
                 <p>Optimizing technology spend is essential for maximizing ROI and ensuring sustainable growth. Here are some effective strategies for managing technology investments:</p>
                 <ul>
@@ -228,9 +219,8 @@
                 </div>
             </div>
 
-            <input type="checkbox" id="tab3" class="tab">
-            <label class="tab-label" for="tab3">4. The Role of AI and ML in Modernizing Legacy Systems</label>
-            <div id="blog3" class="tab-content">
+            <!-- Blog 3 -->
+            <div id="blog3" class="section">
                 <h3>4. The Role of AI and ML in Modernizing Legacy Systems</h3>
                 <p>Artificial intelligence (AI) and machine learning (ML) are powerful tools for modernizing legacy systems. Here are some ways these technologies can enhance efficiency and drive innovation:</p>
                 <ul>
