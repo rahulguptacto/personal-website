@@ -113,6 +113,7 @@
             display: flex;
             flex-wrap: wrap;
             border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
         }
         .tab {
             padding: 10px;
@@ -130,6 +131,10 @@
         }
         .tab-content.active {
             display: block;
+        }
+        .tab.active {
+            background-color: #fff;
+            border-bottom: 1px solid #fff;
         }
     </style>
     <script>
@@ -149,6 +154,10 @@
                     contents[index].classList.add("active");
                 });
             });
+
+            // Initialize first tab as active
+            tabs[0].classList.add("active");
+            contents[0].classList.add("active");
         });
     </script>
 </head>
@@ -175,19 +184,19 @@
         <section id="blog" class="section">
             <h2>Blog</h2>
             <ol>
-                <li><a href="#blog4">Evolution for Enterprises from AI to GenAI</a></li>
                 <li><a href="#blog1">Key Trends in Technology Transformation</a></li>
                 <li><a href="#blog2">Optimizing Technology Spend: Strategies for Success</a></li>
                 <li><a href="#blog3">The Role of AI and ML in Modernizing Legacy Systems</a></li>
+                <li><a href="#blog4">Evolution for Enterprises from AI to GenAI</a></li>
             </ol>
 
             <div class="tab-container">
-                <div class="tab active">1</div>
-                <div class="tab">2</div>
-                <div class="tab">3</div>
-                <div class="tab">4</div>
+                <div class="tab active" data-tab="1">1</div>
+                <div class="tab" data-tab="2">2</div>
+                <div class="tab" data-tab="3">3</div>
+                <div class="tab" data-tab="4">4</div>
             </div>
-            <div id="blog1" class="tab-content active">
+            <div id="tab-1" class="tab-content active">
                 <h3>1. Key Trends in Technology Transformation</h3>
                 <p>As technology continues to evolve at a rapid pace, staying ahead of the curve is crucial for businesses. Here are some of the key trends driving technology transformation in 2024:</p>
                 <ul>
@@ -200,7 +209,7 @@
                 <div class="back-to-top"><a href="#blog">Back to top</a></div>
             </div>
 
-            <div id="blog2" class="tab-content">
+            <div id="tab-2" class="tab-content">
                 <h3>2. Optimizing Technology Spend: Strategies for Success</h3>
                 <p>Optimizing technology spend is essential for maximizing ROI and ensuring sustainable growth. Here are some effective strategies for managing technology investments:</p>
                 <ul>
@@ -212,7 +221,7 @@
                 <div class="back-to-top"><a href="#blog">Back to top</a></div>
             </div>
 
-            <div id="blog3" class="tab-content">
+            <div id="tab-3" class="tab-content">
                 <h3>3. The Role of AI and ML in Modernizing Legacy Systems</h3>
                 <p>Artificial intelligence (AI) and machine learning (ML) are powerful tools for modernizing legacy systems. Here are some ways these technologies can enhance efficiency and drive innovation:</p>
                 <ul>
@@ -225,8 +234,8 @@
                 <div class="back-to-top"><a href="#blog">Back to top</a></div>
             </div>
 
-            <div id="blog4" class="tab-content">
-                <h3>4. The Evolution from AI to GenAI</h3>
+            <div id="tab-4" class="tab-content">
+                <h3>4. Evolution for Enterprises from AI to GenAI</h3>
                 <p><strong>Artificial Intelligence (AI):</strong></p>
                 <p>AI encompasses a broad range of technologies that enable machines to mimic human intelligence. Traditional AI includes machine learning (ML) models that are trained to perform specific tasks such as image recognition, natural language processing (NLP), and predictive analytics. AI models improve over time through data exposure, learning patterns, and making data-driven decisions.</p>
         
