@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rahulguptacto.github.io/personal-website/sitemap.xml
+Sitemap: https://rahulguptacto.com/sitemap.xml
