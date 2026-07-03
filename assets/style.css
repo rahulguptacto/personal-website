@@ -302,7 +302,7 @@ h3 {
 }
 
 /* mobile nav */
-@media (max-width: 760px) {
+@media (max-width: 860px) {
   .site-nav {
     position: fixed;
     inset: 72px 0 auto 0;
@@ -821,7 +821,7 @@ h3 {
   }
   @keyframes t-in {
     from {
-      opacity: 0.25;
+      opacity: 0.45;
       transform: translateY(14px);
     }
     to {
@@ -1382,4 +1382,9 @@ h3 {
     background: #fff;
     color: #111;
   }
+}
+
+/* keynote grid: last card spans the remaining row */
+.speak-grid > .card:last-child {
+  grid-column: 1 / -1;
 }
