@@ -1,180 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <title>Rahul Gupta - CTO | Technology Transformation Expert | Advisory Services</title>
-    <meta name="description" content="Rahul Gupta, CTO at Conduent, has experience in technology transformation, product modernization, and technology spend optimization.">
-    <meta name="keywords" content="Rahul Gupta, CTO, technology transformation, product modernization, technology spend optimization, technology services, CIO, CDO">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            border-bottom: #77a1d3 3px solid;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-        }
-        header li {
-            padding: 0 15px;
-        }
-        header li:not(:last-child) {
-            border-right: 1px solid #fff;
-        }
-        header #branding {
-            flex: 1;
-            text-align: center;
-        }
-        header #branding h1 {
-            margin: 0;
-        }
-        header #branding p {
-            margin: 5px 0 0 0;
-        }
-        .section {
-            padding: 20px;
-            background: #fff;
-            margin: 20px 0;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            text-align: justify;
-        }
-        .flex-container {
-            display: flex;
-            align-items: flex-start;
-            flex-wrap: wrap;
-        }
-        .flex-container img {
-            width: 150px;
-            height: auto;
-            border-radius: 50%;
-            margin-right: 20px;
-            flex-shrink: 0;
-        }
-        .flex-container div {
-            flex: 1;
-            text-align: justify;
-        }
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-                margin: auto;
-            }
-            header {
-                flex-direction: column;
-                text-align: center;
-            }
-            header ul {
-                flex-direction: column;
-            }
-            header li {
-                padding: 10px 0;
-                border: none;
-            }
-            .flex-container {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .flex-container img {
-                margin: 0 0 20px 0;
-            }
-            .flex-container div {
-                text-align: justify;
-            }
-            footer {
-                text-align: justify;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rahul Gupta — Founder &amp; CEO, Kaia AI | AI for Regulated Industries</title>
+  <meta name="description" content="Founder &amp; CEO of Kaia AI — self-improving, human-in-the-loop AI for regulated industries. Former CEO, Technology Services at Toptal and first-ever CTO/CTPO of Conduent (NYSE: CNDT). 26 years building technology businesses at scale." />
+  <link rel="canonical" href="https://rahulguptacto.github.io/personal-website/" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rahul Gupta — Founder &amp; CEO, Kaia AI" />
+  <meta property="og:description" content="Building AI the regulated world can trust. 26 years running technology at scale — Toptal, Conduent (NYSE: CNDT), and now Kaia AI." />
+  <meta property="og:url" content="https://rahulguptacto.github.io/personal-website/" />
+  <meta property="og:image" content="https://rahulguptacto.github.io/personal-website/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="./favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+  <link rel="alternate" type="application/rss+xml" title="Rahul Gupta — Writing" href="./feed.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rahul Gupta",
+    "jobTitle": "Founder & CEO, Kaia AI",
+    "url": "https://rahulguptacto.github.io/personal-website/",
+    "image": "https://rahulguptacto.github.io/personal-website/profile.jpeg",
+    "sameAs": [
+      "https://www.linkedin.com/in/rahulguptacto/",
+      "https://kaiaai.ai"
+    ],
+    "worksFor": { "@type": "Organization", "name": "Kaia AI", "url": "https://kaiaai.ai" },
+    "alumniOf": ["Conduent", "Toptal", "Capgemini", "Infosys"],
+    "knowsAbout": ["Enterprise AI", "AI governance", "Human-in-the-loop AI", "Regulated industries", "Platform engineering", "Digital transformation"]
+  }
+  </script>
 </head>
 <body>
-    <header>
-        <div id="branding">
-            <h1>Rahul Gupta</h1>
-            <p>Chief Technology and Information Officer</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="achievements.html">Achievements</a></li>
-                <li><a href="services.html">Expertise</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
 
-    <div class="container">
-        <section id="bio" class="section">
-            <h2>About Me</h2>
-            <div class="flex-container">
-            <img src="profile.jpeg" alt="Profile picture">
-                <div>
-                    <p>A seasoned C-suite technology leader with extensive experience in managing large-scale technology transformations and product management. Currently, I serve as the Chief Technology Officer at Conduent, a global leader in digital interactions and business process outsourcing. With over 24 years of experience in the IT services industry, I have successfully delivered YOY revenue growth of 15%, optimized technology spend by 35%, and improved operating margins by 10%.</p>
-                    <p>I have been managing a portfolio of all Technology Products development and client implementation services and drive company's revenue growth with a solution and client centric approach. Played dual roles of CTO and CIO, overseeing technology products build, client implementations, and overall client-side IT services.</p>
-                    <p>My expertise spans across several key areas:</p>
-                    <ul>
-                        <li><strong>Digital Transformation:</strong> Leading the shift from transactional systems to digital platforms.</li>
-                        <li><strong>AI/ML Integration:</strong> Embedding AI and ML into core products to enhance functionality and value.</li>
-                        <li><strong>Cloud Native Product Engineering:</strong> Transitioning from lift-and-shift to cloud-native architectures.</li>
-                        <li><strong>Modular Architecture:</strong> Moving from monolithic structures to modular, flexible designs.</li>
-                        <li><strong>API & Microservices:</strong> Implementing API and microservices-based integration for seamless connectivity.</li>
-                    </ul>
-                    <p>Before joining Conduent, I held senior leadership roles at Capgemini, Infosys, and HCL, managing P&Ls of up to $1 billion. From my 17+ years in Technology Consulting, I have significant experience leading enterprise transformations across ERP, CRM, BI, HR, and EAI for clients in various industries. My core strength lies in aligning technology investments to drive revenue growth, improve profitability, and enhance quality for client retention.</p>
-                    <p>Aligning technology investments to revenue growth, improve profitability and at same time improve quality for client retention has been my strengths throughout my career at Consulting companies pre Conduent and last 7 years at Conduent. Transformation technology for any industry into a revenue & growth, and stock market valuation amidst change management culture is my core strength.</p>
-                </div>
-            </div>
-        </section>
-        <section id="projects-link" class="section">
-            <h2>Learn More About My Work</h2>
-            <p>Products & platform solutions I have led and managed, contributing to business growth and technological innovation.</p>
-            <p><a href="projects.html">Explore My Projects</a></p>
-        </section>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./index.html" aria-label="Rahul Gupta — home">
+        <span class="brand-tile" aria-hidden="true">R</span>
+        <span class="brand-name">Rahul Gupta</span>
+        <span class="brand-suffix">Founder&nbsp;·&nbsp;CTO</span>
+      </a>
+      <button class="menu-btn" aria-label="Menu" aria-expanded="false">
+        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true"><path d="M1 1h16M1 7h16M1 13h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#kaia">Now</a>
+        <a href="#career">Career</a>
+        <a href="./projects.html">Work</a>
+        <a href="./blog.html">Writing</a>
+        <a href="https://kaiaai.ai" target="_blank" rel="noopener">Kaia AI ↗</a>
+        <a class="nav-cta" href="./contact.html">Get in touch</a>
+      </nav>
     </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2024 Rahul Gupta. All Rights Reserved.</p>
-    </footer>
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <canvas id="lattice" aria-hidden="true"></canvas>
+      <div class="wrap">
+        <span class="kicker r-delay-1">Founder &amp; CEO, Kaia AI</span>
+        <h1 class="display">
+          <span class="reveal-line"><span>Building AI the regulated</span></span>
+          <span class="reveal-line"><span>world can <em class="serif-i grad-text">trust</em>.</span></span>
+        </h1>
+        <p class="hero-sub r-delay-2">
+          I'm Rahul Gupta. Twenty-six years running technology at scale —
+          <strong>CEO, Technology Services at Toptal</strong> and first-ever CTO, then CTPO, of
+          <strong>Conduent (NYSE: CNDT, ~$6B)</strong> — and now building
+          <strong>Kaia AI</strong>: self-improving, human-in-the-loop AI for the industries
+          that can't afford to get it wrong.
+        </p>
+        <div class="hero-ctas r-delay-3">
+          <a class="btn btn-primary" href="https://kaiaai.ai" target="_blank" rel="noopener" data-magnetic>Explore Kaia AI <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="#track-record">Track record</a>
+        </div>
+      </div>
+      <span class="scroll-cue" aria-hidden="true">Scroll</span>
+    </section>
+
+    <!-- ============ PROOF BAR ============ -->
+    <section class="proof" aria-label="Career in numbers">
+      <div class="wrap">
+        <div class="stat">
+          <div class="stat-num"><span data-count="26" data-from="0">26</span> yrs</div>
+          <p class="stat-label">Building and running technology businesses</p>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><span data-count="100" data-from="300">100</span><span class="accent">&nbsp;←&nbsp;300</span></div>
+          <p class="stat-label">Bespoke platforms consolidated into standard products</p>
+        </div>
+        <div class="stat">
+          <div class="stat-num">$<span data-count="2" data-from="0.8" data-dec="1">2.0</span>B</div>
+          <p class="stat-label">Technology-led revenue, grown from $800M</p>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><span data-count="25" data-from="0">25</span>+</div>
+          <p class="stat-label">AI/ML products shipped from a 300-engineer Innovation Hub</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NOW / KAIA ============ -->
+    <section class="section" id="kaia">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Now</span>
+            <h2 class="display">Founder again — <em class="serif-i grad-text">by choice</em>.</h2>
+          </div>
+          <p class="lede">After running an 8,000-person technology organization and a $400M services P&amp;L, I write and ship again — because the fastest way to test a thesis about AI is to build with it.</p>
+        </div>
+        <div class="now-grid">
+          <div class="prose">
+            <p><strong>Kaia AI</strong> is a self-improving, human-in-the-loop AI platform for regulated industries. It's built on a conviction earned over 26 years of operating: in regulated work, AI only scales when trust is engineered in — domain-specific models, human-in-the-loop correction that makes the system better with every expert review, governance by design, and benchmarks you publish rather than promise.</p>
+            <p>Kaia is a founder-stage venture and a working proof of the thesis, not a victory lap. Every correction a domain expert makes, makes the platform smarter — that is what self-improving means.</p>
+            <p>If you're operating in a regulated industry and wrestling with how to adopt AI without surrendering your data, your context, or your accountability — <a href="./contact.html">I'd like to compare notes</a>.</p>
+            <div class="kaia-verticals" aria-label="Kaia AI verticals">
+              <span class="pill">Legal</span>
+              <span class="pill">Health</span>
+              <span class="pill">Claims</span>
+              <span class="pill">Government</span>
+              <span class="pill">Pharma</span>
+            </div>
+          </div>
+          <figure class="portrait">
+            <img src="./profile.jpeg" alt="Rahul Gupta" width="420" height="420" loading="lazy" />
+            <figcaption class="portrait-cap">Rahul Gupta · Founder &amp; CEO, Kaia AI</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THESIS ============ -->
+    <section class="section thesis" id="thesis">
+      <div class="wrap">
+        <span class="kicker kicker--amber">The thesis</span>
+        <blockquote class="thesis-quote display">Own the data. Own the context. <em class="serif-i grad-text">Earn the trust.</em></blockquote>
+        <div class="thesis-body prose">
+          <p>Every enterprise is being sold the same story: hand your data to a model provider, wire up an API, and transformation follows. <strong>I think that story is backwards.</strong></p>
+          <p>Models are becoming a commodity. Context is not. The enterprises that win with AI will be the ones that own their data and their context — the domain knowledge, the edge cases, the regulatory constraints, the institutional judgment — rather than outsourcing them to the model providers. Context is the asset that compounds.</p>
+          <p>Owning context is an architecture, not a slogan. Generic AI fails in regulated work because regulated work is defined by its exceptions. What's needed is an <strong>industry harness per vertical</strong>: domain-specific models, evaluation benchmarks that reflect the actual work, governance built into the system rather than bolted on, and humans in the loop — not as a compliance fig leaf, but as the mechanism by which the system improves.</p>
+          <p>And <strong>trust — not labor — is the adoption unlock.</strong> Most consultancies speak the platform language but still run labor-led AI projects, because that is where this quarter's revenue is. The differentiation is trust plus reusable, industry-specific capability: set the right AI foundation, build the harness for the vertical, then launch, rinse, and repeat at enterprise scale.</p>
+        </div>
+        <blockquote class="thesis-2018">
+          Nobody says operations roles will go away… it will be more complex and knowledge-based. It's the right evolution of a human skill set with technology modernization. That's how we need to upskill ourselves and our workforce.
+          <cite>— On Conduent's main client stage, 2018 · six years before "augment, don't replace" became consensus</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============ CAREER ============ -->
+    <section class="section" id="career">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Operating history</span>
+            <h2 class="display">Twenty-six years, <em class="serif-i">present tense</em>.</h2>
+          </div>
+          <p class="lede">Seventeen years in consulting, eight operating a $6B public company's technology, a CEO seat — and now a founder's desk. Every number below is evidence, not identity.</p>
+        </div>
+
+        <div class="timeline">
+          <span class="timeline-draw" aria-hidden="true"></span>
+
+          <article class="t-item t-item--now">
+            <span class="t-period">2025 — Present</span>
+            <h3 class="t-role">Founder &amp; CEO <span class="t-org">· Kaia AI</span></h3>
+            <p class="t-line">Self-improving, human-in-the-loop AI for regulated industries — the thesis, built with my own hands.</p>
+            <ul class="t-points">
+              <li><strong>Self-improving by design:</strong> every expert correction improves the system — human-in-the-loop as the learning mechanism, not a checkbox</li>
+              <li>Governance by design and a published benchmark methodology — trust engineered in, not promised</li>
+              <li>Domain-specific models for Legal, Health, Claims, Government, and Pharma</li>
+            </ul>
+          </article>
+
+          <article class="t-item">
+            <span class="t-period">2025 — Feb 2026</span>
+            <h3 class="t-role">CEO, Technology Services <span class="t-org">· Toptal</span></h3>
+            <p class="t-line">Ran the $400M technology-services P&amp;L; returned it to growth after ten quarters of decline.</p>
+            <ul class="t-points">
+              <li><strong>First revenue growth in 10 quarters</strong> — +10% YoY; 100% revenue retention in 2025</li>
+              <li>Built and launched a net-new Data &amp; AI offering: <strong>$15M revenue in 9 months</strong></li>
+              <li>70 offerings across four practices: Data/AI, Cloud, Cybersecurity, Enterprise Applications</li>
+              <li>Named AI wins: GenAI platforms for a CPG major · AI hub for bio-pharma genome research · KYC Risk Platform for a bank</li>
+            </ul>
+          </article>
+
+          <article class="t-item">
+            <span class="t-period">2017 — 2024</span>
+            <h3 class="t-role">First-ever CTO → Chief Technology &amp; Product Officer <span class="t-org">· Conduent (NYSE: CNDT, ~$6B)</span></h3>
+            <p class="t-line">Built the technology organization of a ~$6B public company from zero, then rebuilt its product portfolio into a platform business.</p>
+            <ul class="t-points">
+              <li>Led <strong>8,000 people across 200+ locations</strong> with a $1.45B budget, reporting to the CEO</li>
+              <li>Grew technology-led revenue from <strong>$800M to $2B</strong>; consolidated 300+ platforms into 100 products; ~$400M saved</li>
+              <li>Launched <strong>five enterprise platforms on Microsoft Azure</strong> (2019) — Dara conversational AI, Analytics, Automation, Blockchain, Mobility — quoted by name in the public announcement</li>
+              <li>Innovation Hub of 300+ engineers shipping 25+ AI/ML products; intelligent document processing at 1B+ documents a year</li>
+              <li>Fixed the inherited infrastructure crisis: 102 data centers → 20 · Sev-1 incidents 120/month → under 5 · 3-year PCI backlog cleared in 6 months</li>
+              <li>Real-time, ledger-based government payments: <strong>$1B+ a year across 22 states</strong></li>
+              <li>Final chapter (International Transit): won a <strong>$1B TCV Melbourne transit contract</strong> — the largest in company history — through product-led sales</li>
+            </ul>
+          </article>
+
+          <article class="t-item">
+            <span class="t-period">2014 — 2017</span>
+            <h3 class="t-role">BU Head, Enterprise Apps → Head, Oracle Service Line <span class="t-org">· IGATE → Capgemini</span></h3>
+            <p class="t-line">Turned around an $800M enterprise-applications P&amp;L while integrating IGATE into a company fifteen times its size.</p>
+            <ul class="t-points">
+              <li>$800M P&amp;L, 8,000 people; revenue from −5% to +10% YoY; margin from under 10% to 18%</li>
+              <li>Oracle service line: lowest-performing BU to fastest-growing in 18 months</li>
+            </ul>
+          </article>
+
+          <article class="t-item">
+            <span class="t-period">2013 — 2014</span>
+            <h3 class="t-role">VP, Enterprise Applications, Financial Services <span class="t-org">· HCL</span></h3>
+            <p class="t-line">Ran a $100M financial-services applications P&amp;L and grew it 15% in a year.</p>
+          </article>
+
+          <article class="t-item">
+            <span class="t-period">2001 — 2013</span>
+            <h3 class="t-role">Programmer → Senior Director <span class="t-org">· Infosys</span></h3>
+            <p class="t-line">Twelve years, programmer to senior director — built a CRM practice into a $100M P&amp;L and ran enterprise applications for Capital One, Fidelity, Goldman Sachs, Citi, and American Express.</p>
+          </article>
+
+          <article class="t-item">
+            <span class="t-period">1999 — 2001</span>
+            <h3 class="t-role">Manager, CRM &amp; Corporate Strategy <span class="t-org">· Mahindra &amp; Mahindra</span></h3>
+            <p class="t-line">Delivered Mahindra's first enterprise CRM implementation — and the lesson that still holds: transformation is 30% technology, 70% people.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRACK RECORD ============ -->
+    <section class="section" id="track-record">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Track record</span>
+            <h2 class="display">Outcomes, not <em class="serif-i">activities</em>.</h2>
+          </div>
+          <p class="lede">Six of the flagship builds. Context, the move, the number.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <span class="card-cat">Enterprise AI Platforms</span>
+            <h3>The Five-Platform Azure Launch</h3>
+            <p>Launched five enterprise platforms on Microsoft Azure (2019): <strong>Dara conversational AI, Analytics, Automation, Blockchain, Mobility</strong> — strategy unveiled on stage, announced to the market, shipped as product. Quoted by name in the public announcement.</p>
+          </article>
+          <article class="card">
+            <span class="card-cat">Platform &amp; Product Strategy</span>
+            <h3>300 → 100: The Portfolio Transformation</h3>
+            <p>Consolidated 300+ bespoke platforms into 100 standard products, unified six acquired business units, raised product reuse from under 10% to 70% — <strong>~$400M saved</strong> while technology-led revenue grew from $800M to $2B.</p>
+          </article>
+          <article class="card">
+            <span class="card-cat">Infrastructure &amp; Reliability</span>
+            <h3>The Infrastructure Rescue</h3>
+            <p>Inherited a crisis: 102 data centers, 120 Severity-1 incidents a month, a three-year PCI backlog. Delivered <strong>20 data centers, under 5 Sev-1s a month, PCI in six months</strong>, and cloud adoption from under 10% to 70%+.</p>
+          </article>
+          <article class="card">
+            <span class="card-cat">Payments &amp; FinTech</span>
+            <h3>Government Payments Hub</h3>
+            <p>Real-time, ledger-based payments moving <strong>more than $1B a year across 22 states</strong> — SNAP, EBT, and unemployment disbursements. Irrevocable money at government scale.</p>
+          </article>
+          <article class="card">
+            <span class="card-cat">AI Go-to-Market</span>
+            <h3>Toptal Data &amp; AI Offering</h3>
+            <p>Built and commercialized a net-new Data &amp; AI business inside a $400M services P&amp;L: <strong>$15M revenue in 9 months</strong> — GenAI for a CPG major, a bio-pharma genome AI hub, a bank KYC Risk Platform.</p>
+          </article>
+          <article class="card">
+            <span class="card-cat">Transportation</span>
+            <h3>The $1B Melbourne Win</h3>
+            <p>Product-led sales won a <strong>$1B TCV transit contract</strong> — the largest in company history — built on IoT tolling that cut roadside installation footprint, time, and cost by 50%.</p>
+          </article>
+        </div>
+        <p style="margin-top: 2.2rem">
+          <a class="btn btn-ghost" href="./projects.html">View all work <span class="arr" aria-hidden="true">→</span></a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ WRITING ============ -->
+    <section class="section" id="writing">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Perspective</span>
+            <h2 class="display">Notes from someone who has to <em class="serif-i grad-text">make it work</em>.</h2>
+          </div>
+          <p class="lede">Writing on enterprise AI, modernization, and the economics of technology — plus keynotes delivered to Fortune-500 clients and industry analysts.</p>
+        </div>
+        <div class="essay-list">
+          <a class="essay" href="./writing-ai-to-genai.html">
+            <div>
+              <h3>Evolution for Enterprises from AI to GenAI</h3>
+              <p class="dek">The difference that matters, a four-step adoption playbook, and use cases across healthcare, financial services, and beyond.</p>
+            </div>
+            <span class="essay-meta">2024 · 6 min</span>
+          </a>
+          <a class="essay" href="./writing-ai-ml-legacy-systems.html">
+            <div>
+              <h3>The Role of AI and ML in Modernizing Legacy Systems</h3>
+              <p class="dek">Five ways AI extends the life and value of the systems you already run.</p>
+            </div>
+            <span class="essay-meta">2024 · 3 min</span>
+          </a>
+          <a class="essay" href="./writing-real-time-payments.html">
+            <div>
+              <h3>Revolutionizing Real-Time Payments</h3>
+              <p class="dek">From batch to instant and irrevocable — written from experience moving $1B+ a year.</p>
+            </div>
+            <span class="essay-meta">2024 · 3 min</span>
+          </a>
+        </div>
+        <p style="margin-top: 2.2rem">
+          <a class="btn btn-ghost" href="./blog.html">All writing &amp; speaking <span class="arr" aria-hidden="true">→</span></a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section" id="testimonials">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">What leaders say</span>
+            <h2 class="display">On the record, <em class="serif-i">by name</em>.</h2>
+          </div>
+        </div>
+        <div class="quote-list">
+          <blockquote class="pull-quote">
+            <p>A thought leader with great business and technology acumen and a leader who can drive great outcomes. I have learned a lot from him, enjoyed doing business with him. He will be a tremendous asset to any team.</p>
+            <footer><strong>Angan Guha</strong> MD &amp; CEO, Birlasoft</footer>
+          </blockquote>
+          <blockquote class="pull-quote">
+            <p>An exceptional and dynamic leader who combines deep technical knowledge with a strategic mindset. His ability to quickly course-correct an extremely large, troubled product and technology delivery organization makes him a true asset to any organization needing to transform.</p>
+            <footer><strong>Anna Thwaits</strong> Professional Services Delivery Executive — Capgemini, Oracle, KPIT</footer>
+          </blockquote>
+          <blockquote class="pull-quote">
+            <p>Empowering his team, letting them take the bold steps, and then standing behind them like a pillar, are his core ethos. He has orchestrated some unimaginable deals — and continues to build solutions focused on the pain points commonly seen in the industry.</p>
+            <footer><strong>Harshawardhan Laghate</strong> Consulting · Enterprise Solutions · Business Risk Management</footer>
+          </blockquote>
+          <blockquote class="pull-quote">
+            <p>His leadership and strategic vision have been instrumental. Beyond his professional acumen, Rahul is a compassionate leader who genuinely cares about his team's well-being and development. His dedication, expertise, and people-centric approach make him an asset to any organization.</p>
+            <footer><strong>Prarthana Mitra</strong> HR Business Partner — Lead, Capgemini</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ADVISORY ============ -->
+    <section class="section" id="advisory">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Beyond Kaia</span>
+            <h2 class="display">Where I <em class="serif-i">engage</em>.</h2>
+          </div>
+          <p class="lede">Alongside building Kaia AI, I take on a small number of engagements where the operating history is directly useful.</p>
+        </div>
+        <div class="lane-grid">
+          <div class="lane">
+            <h3>Board &amp; Advisory</h3>
+            <p>Technology, product, and AI strategy for boards and CEOs — especially platform transitions, AI adoption in regulated industries, and technology-organization turnarounds.</p>
+          </div>
+          <div class="lane">
+            <h3>Private Equity</h3>
+            <p>Operating-partner and diligence work: product and technology assessment of software and services assets, value-creation plans, first-hundred-days execution.</p>
+          </div>
+          <div class="lane">
+            <h3>Keynotes &amp; Briefings</h3>
+            <p>Talks for client, analyst, and investor audiences on operationalizing AI in regulated industries, the services-industry AI transition, and platform economics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="contact-box">
+          <div>
+            <span class="kicker">Contact</span>
+            <h2 class="display">Comparing notes beats <em class="serif-i grad-text">pitching decks</em>.</h2>
+            <p class="lede">If you're wrestling with AI in a regulated industry, evaluating a technology organization, or building something that needs to be trusted — I'd like to hear about it.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:rahulkel.gupta@gmail.com" data-magnetic>Email me directly</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/rahulguptacto/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <p class="contact-note">For Kaia AI inquiries → <a href="https://kaiaai.ai" target="_blank" rel="noopener">kaiaai.ai</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <span class="footer-note">© <span id="yr">2026</span> Rahul Gupta</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="./index.html">Home</a>
+        <a href="./projects.html">Selected work</a>
+        <a href="./blog.html">Writing</a>
+        <a href="./contact.html">Contact</a>
+        <a href="https://kaiaai.ai" target="_blank" rel="noopener">Kaia AI ↗</a>
+        <a href="./feed.xml">RSS</a>
+      </nav>
+      <span class="footer-note">Hand-built. No frameworks, no trackers.</span>
+    </div>
+  </footer>
+
+  <script src="./assets/main.js" defer></script>
 </body>
 </html>

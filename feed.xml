@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Rahul Gupta — Writing</title>
+    <link>https://rahulguptacto.github.io/personal-website/blog.html</link>
+    <description>Essays on enterprise AI, modernization, payments, and the economics of technology.</description>
+    <language>en-us</language>
+    <item>
+      <title>Evolution for Enterprises from AI to GenAI</title>
+      <link>https://rahulguptacto.github.io/personal-website/writing-ai-to-genai.html</link>
+      <guid>https://rahulguptacto.github.io/personal-website/writing-ai-to-genai.html</guid>
+      <description>The difference between traditional AI and generative AI, a four-step enterprise adoption playbook, and use cases across healthcare, financial services, contact centers, transportation, and HR.</description>
+    </item>
+    <item>
+      <title>The Role of AI and ML in Modernizing Legacy Systems</title>
+      <link>https://rahulguptacto.github.io/personal-website/writing-ai-ml-legacy-systems.html</link>
+      <guid>https://rahulguptacto.github.io/personal-website/writing-ai-ml-legacy-systems.html</guid>
+      <description>Five ways AI and ML extend the life and value of legacy systems — predictive maintenance, process automation, analytics on trapped data, customer experience, and real-time security.</description>
+    </item>
+    <item>
+      <title>Revolutionizing Real-Time Payments</title>
+      <link>https://rahulguptacto.github.io/personal-website/writing-real-time-payments.html</link>
+      <guid>https://rahulguptacto.github.io/personal-website/writing-real-time-payments.html</guid>
+      <description>The evolution from batch processing to instant, irrevocable transfers — and what implementation actually requires: infrastructure, security, and regulatory collaboration.</description>
+    </item>
+    <item>
+      <title>The Day You Fired Your Servers and Hired Cloud</title>
+      <link>https://rahulguptacto.github.io/personal-website/writing-cloud-migration.html</link>
+      <guid>https://rahulguptacto.github.io/personal-website/writing-cloud-migration.html</guid>
+      <description>Why the move off on-premises servers pays, where migrations go wrong, and how to sequence one — from a leader who took a $6B enterprise from under 10% cloud to 70%+.</description>
+    </item>
+    <item>
+      <title>Key Trends in Technology Transformation</title>
+      <link>https://rahulguptacto.github.io/personal-website/writing-tech-trends.html</link>
+      <guid>https://rahulguptacto.github.io/personal-website/writing-tech-trends.html</guid>
+      <description>The five forces reshaping enterprise technology — AI/ML, cloud, cybersecurity, IoT and edge computing, and blockchain — and why staying ahead of them is a business imperative.</description>
+    </item>
+    <item>
+      <title>Optimizing Technology Spend: Strategies for Success</title>
+      <link>https://rahulguptacto.github.io/personal-website/writing-tech-spend.html</link>
+      <guid>https://rahulguptacto.github.io/personal-website/writing-tech-spend.html</guid>
+      <description>Four disciplines for getting more from every technology dollar — audit, prioritization, cloud economics, and automation — from the leader who saved ~$400M from a $1.45B budget.</description>
+    </item>
+  </channel>
+</rss>
